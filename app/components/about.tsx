@@ -1,7 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { inter, youngSerif } from "../font";
+import { AboutData } from "../interfaces";
 
 export default function AboutComponent() {
+  const getData = useCallback(async () => {
+    try {
+      const response = await fetch(
+        "https://json-portfolio-data.vercel.app/about"
+      );
+      const data = await response.json();
+      return data as AboutData;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      return {} as AboutData;
+    }
+  }, []);
+
+  const [about, setAbout] = useState<AboutData>({
+    past: "",
+    present: "",
+    outofwork: "",
+  });
+
+  useEffect(() => {
+    getData().then((data) => setAbout(data));
+  }, [getData]);
+
+  console.log(about);
   return (
     <section
       id="about"
@@ -9,23 +34,11 @@ export default function AboutComponent() {
     >
       <p className={`text-test1 ${inter.className}`}></p>
       <br />
-      <p className={`text-test1 ${inter.className}`}>
-        For the past 10 years, I lived in South Korea as a student and also as
-        an expat. Recently I moved to Malta, Europe to explore and fully
-        experience the life as a digital nomad.
-      </p>
+      <p className={`text-test1 ${inter.className}`}>{about.past}</p>
       <br />
-      <p className={`text-test1 ${inter.className}`}>
-        Currently, I'm working as a full-stack developer building web
-        applications in the industry of Crypto/Blockchain. Previously, I worked
-        in Travel/Hospitality - Tech, R&D as a back-end developer in
-        IoT/Safety-Tech industry, building APIs & Web Services.
-      </p>
+      <p className={`text-test1 ${inter.className}`}>{about.present}</p>
       <br />
-      <p className={`text-test1 ${inter.className}`}>
-        When I'm not a programmer, I create digital art, travel, go on hikes, or
-        sometimes write Medium articles.
-      </p>
+      <p className={`text-test1 ${inter.className}`}>{about.outofwork}</p>
     </section>
   );
 }

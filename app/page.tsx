@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import AboutComponent from "./components/about";
 import WorkComponent from "./components/work";
 import ProjectsComponent from "./components/projects";
