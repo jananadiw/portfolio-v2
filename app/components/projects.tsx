@@ -53,7 +53,7 @@ export default function ProjectsComponent() {
       <div className="flex gap-2 inline-block items-center">
         <p className={`text-test1 text-sm ${inter.className}`}>
           <Link
-            href="https://www.canvasconfetti.com/"
+            href="https://github.com/jananadiw"
             target="_blank"
             rel="noopener noreferrer"
           >

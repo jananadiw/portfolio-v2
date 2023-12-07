@@ -40,7 +40,6 @@ export default function PaintingsComponent() {
           alt="artwork1"
         />
       </div>
-      <br />
       <div className="flex gap-2 inline-block items-center">
         <p className={`text-test1 text-sm ${inter.className}`}>
           <Link

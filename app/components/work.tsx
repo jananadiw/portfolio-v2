@@ -64,12 +64,8 @@ export default function WorkComponent() {
       <br />
       <div className="flex gap-2 inline-block items-center">
         <p className={`text-test1 text-sm ${inter.className}`}>
-          <Link
-            href="https://www.canvasconfetti.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            See Detailed Resume{" "}
+          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            See Detailed Resume
           </Link>
         </p>
         <ArrowSmallRightIcon className="h-4 w-4 text-test" />
