@@ -91,22 +91,56 @@ export default function HeaderComponent() {
       <ul className="ml-1 mt-8 flex items-center">
         <li className="mr-5 text-xs">
           <div className="icon-container">
-            <Image width={32} height={32} alt="test" src="icons/ig.svg" />
+            <Link
+              href={"https://www.instagram.com/jananadiw/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image width={32} height={32} alt="test" src="icons/ig.svg" />
+            </Link>
           </div>
         </li>
         <li className="mr-5 text-xs">
           <div className="icon-container">
-            <Image width={32} height={32} alt="test" src="icons/github.svg" />
+            <Link
+              href={"https://github.com/jananadiw"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image width={32} height={32} alt="test" src="icons/github.svg" />
+            </Link>
           </div>
         </li>
         <li className="mr-5 text-xs">
           <div className="icon-container">
-            <Image width={28} height={28} alt="test" src="icons/linkedin.svg" />
+            <Link
+              href={"https://www.linkedin.com/in/jananadiw/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={28}
+                height={28}
+                alt="test"
+                src="icons/linkedin.svg"
+              />
+            </Link>
           </div>
         </li>
         <li className="mr-5 text-xs">
           <div className="icon-container">
-            <Image width={32} height={32} alt="test" src="icons/twitter.svg" />
+            <Link
+              href={"https://twitter.com/jananadiw_"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={32}
+                height={32}
+                alt="test"
+                src="icons/twitter.svg"
+              />
+            </Link>
           </div>
         </li>
       </ul>
