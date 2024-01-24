@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { inter, youngSerif } from "../font";
+import { inter, youngSerif } from "../styles/font";
 
 export default function FooterComponent() {
   return (

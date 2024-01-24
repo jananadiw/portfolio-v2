@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { inter, youngSerif } from "../font";
+import { inter, youngSerif } from "../styles/font";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 

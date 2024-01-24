@@ -1,9 +1,8 @@
 import React, { useEffect, useState, use, useCallback } from "react";
 import Image from "next/image";
-import { inter, youngSerif } from "../font";
+import { inter, youngSerif } from "../styles/font";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
-import mediumThumbnail from "../../public/images/article.jpg";
 import { Project } from "../interfaces/index";
 
 export default function ProjectsComponent() {
@@ -23,8 +22,6 @@ export default function ProjectsComponent() {
     getData().then((data) => setProjects(data));
   }, []);
 
-  console.log("projects", projects);
-
   return (
     <section
       id="projects"
@@ -40,7 +37,7 @@ export default function ProjectsComponent() {
               width={100}
               height={113}
               alt="thumbnail"
-              src={"images/grainy.svg"}
+              src={project.image}
             />
           </div>
           <div className={`text-test1 ${inter.className} w-3/4 ml-4`}>
