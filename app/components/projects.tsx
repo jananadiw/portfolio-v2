@@ -4,19 +4,25 @@ import { inter, youngSerif } from "../styles/font";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../interfaces/index";
+import { Loading } from "../components/Loading";
 
 export default function ProjectsComponent() {
-  const getData = useCallback(async () => {
-    const response = await fetch(
-      "https://json-portfolio-data.vercel.app/project"
-    );
-
-    const data = await response.json();
-
-    return data as Project[]; // Assuming your data is an array of projects
-  }, []);
-
+  const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState<Project[]>([]);
+
+  const getData = useCallback(async () => {
+    try {
+      const response = await fetch(
+        "https://json-portfolio-data.vercel.app/project"
+      );
+
+      const data = await response.json();
+      setLoading(false);
+      return data as Project[]; // Assuming your data is an array of projects
+    } catch (error) {}
+    setLoading(false);
+    return [] as Project[];
+  }, []);
 
   useEffect(() => {
     getData().then((data) => setProjects(data));
@@ -27,25 +33,29 @@ export default function ProjectsComponent() {
       id="projects"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
-      {projects.map((project: any, index: number) => (
-        <div
-          key={index}
-          className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex"
-        >
-          <div className="w-1/4">
-            <Image
-              width={100}
-              height={113}
-              alt="thumbnail"
-              src={project.image}
-            />
+      {loading ? (
+        <Loading componentName="projects" />
+      ) : (
+        projects.map((project: any, index: number) => (
+          <div
+            key={index}
+            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex"
+          >
+            <div className="w-1/4">
+              <Image
+                width={100}
+                height={113}
+                alt="thumbnail"
+                src={project.image}
+              />
+            </div>
+            <div className={`text-test1 ${inter.className} w-3/4 ml-4`}>
+              <h3>{project.name}</h3>
+              <p className="mt-2">{project.detail}</p>
+            </div>
           </div>
-          <div className={`text-test1 ${inter.className} w-3/4 ml-4`}>
-            <h3>{project.name}</h3>
-            <p className="mt-2">{project.detail}</p>
-          </div>
-        </div>
-      ))}
+        ))
+      )}
       <br />
       <div className="flex gap-2 inline-block items-center">
         <p className={`text-test1 text-sm ${inter.className}`}>
