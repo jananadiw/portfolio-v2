@@ -1,6 +1,6 @@
 import React, { useEffect, useState, use, useCallback } from "react";
 import Image from "next/image";
-import { inter, youngSerif } from "../styles/font";
+import { outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../interfaces/index";
@@ -39,7 +39,7 @@ export default function ProjectsComponent() {
         projects.map((project: any, index: number) => (
           <div
             key={index}
-            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex"
+            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
           >
             <div className="w-1/4">
               <Image
@@ -49,16 +49,15 @@ export default function ProjectsComponent() {
                 src={project.image}
               />
             </div>
-            <div className={`text-test1 ${inter.className} w-3/4 ml-4`}>
+            <div className={`${outfit.className} w-3/4 ml-4 text-lg`}>
               <h3>{project.name}</h3>
-              <p className="mt-2">{project.detail}</p>
+              <p className="text-test1 mt-2">{project.detail}</p>
             </div>
           </div>
         ))
       )}
-      <br />
       <div className="flex gap-2 inline-block items-center">
-        <p className={`text-test1 text-sm ${inter.className}`}>
+        <p className={`text-lg font-extrabold	 ${outfit.className} `}>
           <Link
             href="https://github.com/jananadiw"
             target="_blank"

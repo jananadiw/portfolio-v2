@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { inter, youngSerif } from "../styles/font";
+import { inter, youngSerif, outfit } from "../styles/font";
 import { AboutData } from "../interfaces";
 import { Loading } from "../components/Loading";
 
@@ -40,13 +40,27 @@ export default function AboutComponent() {
         <Loading componentName={"about"} />
       ) : (
         <>
-          <p className={`text-test1 ${inter.className}`}></p>
+          <p
+            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+          ></p>
           <br />
-          <p className={`text-test1 ${inter.className}`}>{about.past}</p>
+          <p
+            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+          >
+            {about.past}
+          </p>
           <br />
-          <p className={`text-test1 ${inter.className}`}>{about.present}</p>
+          <p
+            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+          >
+            {about.present}
+          </p>
           <br />
-          <p className={`text-test1 ${inter.className}`}>{about.outofwork}</p>
+          <p
+            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+          >
+            {about.outofwork}
+          </p>
         </>
       )}
     </section>

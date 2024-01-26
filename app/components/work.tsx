@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { inter, youngSerif } from "../styles/font";
+import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
@@ -39,19 +39,26 @@ export default function WorkComponent() {
         experience.map((item: any, index: number) => (
           <div
             key={index}
-            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex "
+            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
           >
-            <div className="w-1/4">{item.time}</div>
-            <div className={`text-test1 ${inter.className} w-3/4 ml-4`}>
-              <h3>
+            <div className={`w-1/4 text-slate-300 text-md ${outfit.className}`}>
+              {item.time}
+            </div>
+            <div
+              className={`text-test1 text-lg ${outfit.className} w-3/4 ml-4`}
+            >
+              <h3 className="text-slate-300">
                 {item.title} - {item.workplace}
               </h3>
-              <p className="mt-4">{item.detail}</p>
+              <p className="mt-4 text-test1">{item.detail}</p>
               <div
-                className={`mt-4 flex flex-row gap-4 ${youngSerif.className} text-sm font-semibold`}
+                className={`mt-4 flex flex-row gap-4 ${outfit.className} text-sm`}
               >
                 {item.projects.map((project: any, index: number) => (
-                  <div key={index} className="flex items-center">
+                  <div
+                    key={index}
+                    className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
+                  >
                     <>
                       <PaperClipIcon className="h-4 w-4 mr-1" />
                       <Link
@@ -69,9 +76,8 @@ export default function WorkComponent() {
           </div>
         ))
       )}
-      <br />
       <div className="flex gap-2 inline-block items-center">
-        <p className={`text-test1 text-sm ${inter.className}`}>
+        <p className={`text-lg font-extrabold	 ${outfit.className}`}>
           <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             See Detailed Resume
           </Link>

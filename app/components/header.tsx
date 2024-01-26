@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { inter, youngSerif } from "../styles/font";
+import { inter, youngSerif, outfit, playfairDisplay } from "../styles/font";
 import Link from "next/link";
 
 export default function HeaderComponent() {
@@ -33,31 +33,37 @@ export default function HeaderComponent() {
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1
-          className={`text-4xl font-bold tracking-tight sm:text-5x text-test2 ${youngSerif.className} tracking-widest`}
+          className={`text-6xl font-bold tracking-tight sm:text-5x text-test2 ${playfairDisplay.className} tracking-widest`}
         >
           Hello!
         </h1>
         <h2
-          className={`mt-3 text-xl font-medium tracking-tight text-test2 sm:text-xl ${inter.className}`}
+          className={`mt-3 md:text-3xl font-medium tracking-tight text-test2 sm:text-xl ${outfit.className}`}
         >
           I'm Jananadi
         </h2>
         <p
-          className={`mt-2 max-w-xs leading-normal text-test1 text-md ${inter.className}`}
+          className={`mt-2 max-w-xs leading-normal text-test1 text-xl ${outfit.className}`}
         >
           I build accessible, inclusive products and digital experiences for the
           web
         </p>
-        <nav className={`nav hidden lg:block ${inter.className}`}>
+        <nav className={`nav hidden lg:block ${outfit.className} text-xl`}>
           <ul className="mt-16 w-max">
-            <li className={activeLink === "about" ? "text-xl text-test2" : ""}>
+            <li
+              className={
+                activeLink === "about"
+                  ? "text-2xl text-test2 text-slate-300"
+                  : ""
+              }
+            >
               <a className="group flex items-center py-1" href="#about">
                 <p className="hover:text-test2 hover:text-xl text-test1 transition-size duration-300">
                   About
                 </p>
               </a>
             </li>
-            <li className={activeLink === "work" ? "text-xl text-test2" : ""}>
+            <li className={activeLink === "work" ? "text-2xl text-test2" : ""}>
               <a
                 className="group flex items-center py-1 text-test1"
                 href="#work"
@@ -68,7 +74,7 @@ export default function HeaderComponent() {
               </a>
             </li>
             <li
-              className={activeLink === "projects" ? "text-xl text-test2" : ""}
+              className={activeLink === "projects" ? "text-2xl text-test2" : ""}
             >
               <a className="group flex items-center py-1" href="#projects">
                 <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">
@@ -77,7 +83,9 @@ export default function HeaderComponent() {
               </a>
             </li>
             <li
-              className={activeLink === "paintings" ? "text-xl text-test2" : ""}
+              className={
+                activeLink === "paintings" ? "text-2xl text-test2" : ""
+              }
             >
               <a className="group flex items-center py-1" href="#paintings">
                 <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">

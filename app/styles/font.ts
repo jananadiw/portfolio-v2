@@ -1,14 +1,20 @@
-import { Young_Serif, Inter, Poppins } from "@next/font/google"
+import { Young_Serif, Inter, Outfit, Playfair_Display } from "next/font/google"
 
 export const inter = Inter({
     subsets: ['latin'],
-    weight: ['200', '900'],
+    weight: ['300', '900'],
 })
 export const youngSerif = Young_Serif({
   subsets: ['latin'],
   weight: '400'
 })
-export const poppins = Poppins({
+
+export const outfit = Outfit({
   subsets: ['latin'],
-  weight: '400'
+  weight: ['100', '200']
+})
+
+export const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['700']
 })

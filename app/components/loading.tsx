@@ -1,5 +1,6 @@
 import React from "react";
 
+// TODO: Move to interfaces
 type LoadingProps = {
   componentName: string;
 };
@@ -68,7 +69,7 @@ export const Loading: React.FC<LoadingProps> = ({ componentName }) => {
     loadingContent = (
       <div>
         {/* Default content if none of the conditions match */}
-        Loading...
+        <div className="h-4 bg-slate-700 rounded"></div>
       </div>
     );
   }
