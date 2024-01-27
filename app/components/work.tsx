@@ -52,13 +52,10 @@ export default function WorkComponent() {
               </h3>
               <p className="mt-4 text-test1">{item.detail}</p>
               <div
-                className={`mt-4 flex flex-row gap-4 ${outfit.className} text-sm`}
+                className={`mt-4 flex flex-row gap-4 ${outfit.className} text-md text-slate-100`}
               >
                 {item.projects.map((project: any, index: number) => (
-                  <div
-                    key={index}
-                    className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
-                  >
+                  <div key={index} className="flex items-center">
                     <>
                       <PaperClipIcon className="h-4 w-4 mr-1" />
                       <Link
@@ -69,6 +66,18 @@ export default function WorkComponent() {
                         {project}
                       </Link>
                     </>
+                  </div>
+                ))}
+              </div>
+              <div
+                className={`mt-6 flex flex-row gap-4 ${outfit.className} text-sm`}
+              >
+                {item.stack.map((tech: string) => (
+                  <div
+                    key={index}
+                    className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
+                  >
+                    {tech}
                   </div>
                 ))}
               </div>

@@ -11,18 +11,9 @@ html {
 }
 
 body {
-  backdrop-filter: blur(0.69px);
-  background: linear-gradient(to right, #1b212c, #14303f); /* Initial gradient colors */
-  animation: gradientAnimation 10s linear infinite; /* Adjust the duration and other properties as needed */
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%; /* Starting position of the gradient */
-  }
-  100% {
-    background-position: 100% 50%; /* Ending position of the gradient */
-  }
+  backdrop-filter: blur(0.70px);
+  // background: linear-gradient(to right, #1b212c, #14303f); /* Initial gradient colors */
+  // animation: gradientAnimation 10s linear infinite; /* Adjust the duration and other properties as needed */
 }
 
 .icon-container {
