@@ -100,17 +100,6 @@ export default function HeaderComponent() {
         <li className="mr-5 text-xs">
           <div className="icon-container">
             <Link
-              href={"https://www.instagram.com/jananadiw/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image width={32} height={32} alt="test" src="icons/ig.svg" />
-            </Link>
-          </div>
-        </li>
-        <li className="mr-5 text-xs">
-          <div className="icon-container">
-            <Link
               href={"https://github.com/jananadiw"}
               target="_blank"
               rel="noopener noreferrer"
@@ -148,6 +137,17 @@ export default function HeaderComponent() {
                 alt="test"
                 src="icons/twitter.svg"
               />
+            </Link>
+          </div>
+        </li>
+        <li className="mr-5 text-xs">
+          <div className="icon-container">
+            <Link
+              href={"https://www.instagram.com/jananadiw/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image width={32} height={32} alt="test" src="icons/ig.svg" />
             </Link>
           </div>
         </li>
