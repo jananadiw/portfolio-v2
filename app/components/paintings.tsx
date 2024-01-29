@@ -19,6 +19,7 @@ export default function PaintingsComponent() {
               "https://janawcontent.s3.ap-northeast-2.amazonaws.com/girl.jpg"
             }
             alt="artwork"
+            style={{ maxWidth: "100%", height: "100%" }}
           />
         </div>
         <div className="rounded-xl overflow-hidden">
@@ -29,6 +30,7 @@ export default function PaintingsComponent() {
               "https://janawcontent.s3.ap-northeast-2.amazonaws.com/mermaid.jpg"
             }
             alt="artwork2"
+            style={{ maxWidth: "100%", height: "100%" }}
           />
         </div>
         <div className="rounded-xl overflow-hidden">
@@ -39,6 +41,7 @@ export default function PaintingsComponent() {
             alt="artwork3"
             width={300}
             height={400}
+            style={{ maxWidth: "100%", height: "100%" }}
           />
         </div>
         <div className="rounded-xl overflow-hidden">
@@ -49,10 +52,11 @@ export default function PaintingsComponent() {
               "https://janawcontent.s3.ap-northeast-2.amazonaws.com/hike.jpg"
             }
             alt="artwork1"
+            style={{ maxWidth: "100%", height: "100%" }}
           />
         </div>
       </div>
-      <div className="flex gap-2 inline-block items-center">
+      <div className="mt-10 flex gap-2 inline-block items-center">
         <p className={`text-lg ${outfit.className}`}>
           <Link
             href="https://www.canvasconfetti.com/"

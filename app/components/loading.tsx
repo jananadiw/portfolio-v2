@@ -65,6 +65,25 @@ export const Loading: React.FC<LoadingProps> = ({ componentName }) => {
         </div>
       </>
     );
+  } else if (componentName === "articles") {
+    loadingContent = (
+      <>
+        <div className="space-y-3 animate-pulse mt-24">
+          {[...Array(2)].map((_, index) => (
+            <div key={index} className="grid grid-cols-3 gap-4 py-16">
+              <div className="h-4 bg-slate-700 rounded col-span-1"></div>
+              <div className="h-4 bg-slate-700 rounded col-span-2">
+                <div className="space-y-3">
+                  <div className="h-4 bg-slate-700 rounded"></div>
+                  <div className="h-4 bg-slate-700 rounded"></div>
+                  <div className="h-4 bg-slate-700 rounded"></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </>
+    );
   } else {
     loadingContent = (
       <div>

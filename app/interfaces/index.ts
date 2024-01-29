@@ -11,6 +11,10 @@ export interface Project {
     id: number;
     name: string;
 }
+export interface Article {
+    name: string;
+    year: number;
+}
 
 export interface AboutData {
     past: string;

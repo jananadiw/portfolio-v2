@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../interfaces/index";
 import { Loading } from "../components/Loading";
+import ArticlesComponent from "../components/articles";
 
 export default function ProjectsComponent() {
   const [loading, setLoading] = useState(true);
@@ -37,23 +38,42 @@ export default function ProjectsComponent() {
         <Loading componentName="projects" />
       ) : (
         projects.map((project: any, index: number) => (
-          <div
-            key={index}
-            className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
+          <Link
+            target="_blank"
+            rel="noreferrer noopener"
+            href={`${project.url}`}
           >
-            <div className="w-1/4">
-              <Image
-                width={100}
-                height={113}
-                alt="thumbnail"
-                src={project.image}
-              />
+            <div
+              key={index}
+              className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
+            >
+              <div className="w-1/4">
+                <Image
+                  width={100}
+                  height={113}
+                  alt="thumbnail"
+                  src={`/images/${project.image}`}
+                  className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                />
+              </div>
+              <div className={`${outfit.className} w-3/4 ml-4 text-lg`}>
+                <h3>{project.name}</h3>
+                <p className="text-test1 mt-2">{project.detail}</p>
+                <div
+                  className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
+                >
+                  {project.stack?.map((tech: string, i: number) => (
+                    <div
+                      key={i}
+                      className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
+                    >
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className={`${outfit.className} w-3/4 ml-4 text-lg`}>
-              <h3>{project.name}</h3>
-              <p className="text-test1 mt-2">{project.detail}</p>
-            </div>
-          </div>
+          </Link>
         ))
       )}
       <div className="flex gap-2 inline-block items-center">
@@ -67,6 +87,9 @@ export default function ProjectsComponent() {
           </Link>
         </p>
         <ArrowSmallRightIcon className="h-4 w-4 text-test" />
+      </div>
+      <div className="mt-16">
+        <ArticlesComponent />
       </div>
     </section>
   );

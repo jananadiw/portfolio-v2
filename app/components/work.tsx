@@ -70,11 +70,11 @@ export default function WorkComponent() {
                 ))}
               </div>
               <div
-                className={`mt-6 flex flex-row gap-4 ${outfit.className} text-sm`}
+                className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
               >
-                {item.stack.map((tech: string) => (
+                {item.stack.map((tech: string, i: number) => (
                   <div
-                    key={index}
+                    key={i}
                     className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
                   >
                     {tech}
