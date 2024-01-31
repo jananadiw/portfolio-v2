@@ -5,6 +5,11 @@ import { Loading } from "../components/Loading";
 
 export default function AboutComponent() {
   const [loading, setLoading] = useState(true);
+  const [about, setAbout] = useState<AboutData>({
+    past: "",
+    present: "",
+    outofwork: "",
+  });
 
   const getData = useCallback(async () => {
     try {
@@ -20,17 +25,10 @@ export default function AboutComponent() {
     }
   }, []);
 
-  const [about, setAbout] = useState<AboutData>({
-    past: "",
-    present: "",
-    outofwork: "",
-  });
-
   useEffect(() => {
     getData().then((data) => setAbout(data));
   }, [getData]);
 
-  console.log(about);
   return (
     <section
       id="about"

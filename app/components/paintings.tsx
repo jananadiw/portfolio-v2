@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
-import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export default function PaintingsComponent() {
   return (
@@ -56,7 +56,7 @@ export default function PaintingsComponent() {
           />
         </div>
       </div>
-      <div className="mt-10 flex gap-2 inline-block items-center">
+      <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-600">
         <p className={`text-lg ${outfit.className}`}>
           <Link
             href="https://www.canvasconfetti.com/"
@@ -66,7 +66,7 @@ export default function PaintingsComponent() {
             See More Paintings
           </Link>
         </p>
-        <ArrowSmallRightIcon className="h-4 w-4 text-test" />
+        <ArrowUpRightIcon className="h-4 w-4 text-test" />
       </div>
     </section>
   );

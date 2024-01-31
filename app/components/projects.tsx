@@ -2,10 +2,10 @@ import React, { useEffect, useState, use, useCallback } from "react";
 import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
-import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../interfaces/index";
 import { Loading } from "../components/Loading";
-import ArticlesComponent from "../components/articles";
+import ArticlesComponent from "../components/Articles";
 
 export default function ProjectsComponent() {
   const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ export default function ProjectsComponent() {
           >
             <div
               key={index}
-              className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
+              className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10"
             >
               <div className="w-1/4">
                 <Image
@@ -56,7 +56,9 @@ export default function ProjectsComponent() {
                   className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
                 />
               </div>
-              <div className={`${outfit.className} w-3/4 ml-4 text-lg`}>
+              <div
+                className={`${outfit.className} w-3/4 ml-4 text-lg group-hover:text-orange-600`}
+              >
                 <h3>{project.name}</h3>
                 <p className="text-test1 mt-2">{project.detail}</p>
                 <div
@@ -76,17 +78,17 @@ export default function ProjectsComponent() {
           </Link>
         ))
       )}
-      <div className="flex gap-2 inline-block items-center">
-        <p className={`text-lg font-extrabold	 ${outfit.className} `}>
+      <div className="flex gap-2 inline-block items-center hover:text-orange-300">
+        <p className={`text-lg font-extrabold ${outfit.className}`}>
           <Link
             href="https://github.com/jananadiw"
             target="_blank"
             rel="noopener noreferrer"
           >
-            See Github Profile{" "}
+            See Github Profile
           </Link>
         </p>
-        <ArrowSmallRightIcon className="h-4 w-4 text-test" />
+        <ArrowUpRightIcon className="h-4 w-4 text-test" />
       </div>
       <div className="mt-16">
         <ArticlesComponent />

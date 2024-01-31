@@ -1,11 +1,11 @@
 "use client";
 
-import AboutComponent from "./components/about";
-import WorkComponent from "./components/work";
-import ProjectsComponent from "./components/projects";
-import PaintingsComponent from "./components/paintings";
-import HeaderComponent from "./components/header";
-import FooterComponent from "./components/footer";
+import AboutComponent from "./components/About";
+import WorkComponent from "./components/Work";
+import ProjectsComponent from "./components/Projects";
+import PaintingsComponent from "./components/Paintings";
+import HeaderComponent from "./components/Header";
+import FooterComponent from "./components/Footer";
 
 export default function Home() {
   return (

@@ -44,7 +44,7 @@ export default function ArticlesComponent() {
           >
             <div
               key={index}
-              className="p-4 rounded-md transition hover:bg-test5 hover:drop-shadow flex mb-10"
+              className="p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow flex mb-10"
             >
               <div className="w-1/4">
                 <Image
