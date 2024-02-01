@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { Project } from "../interfaces/index";
 import { Loading } from "../components/Loading";
-import ArticlesComponent from "../components/Articles";
+import ArticlesComponent from "../components/articles";
 
 export default function ProjectsComponent() {
   const [loading, setLoading] = useState(true);

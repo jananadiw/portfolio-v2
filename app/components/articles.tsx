@@ -2,7 +2,6 @@ import React, { useEffect, useState, use, useCallback } from "react";
 import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
-import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 import { Article } from "../interfaces/index";
 import { Loading } from "../components/Loading";
 
