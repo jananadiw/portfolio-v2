@@ -112,7 +112,7 @@ export default function HeaderComponent() {
                 width={28}
                 height={28}
                 alt="test"
-                src="icons/linkedin.svg"
+                src="icons/linkedIn.svg"
               />
             </Link>
           </div>
