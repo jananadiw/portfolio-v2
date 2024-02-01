@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { inter, youngSerif, outfit } from "../styles/font";
 import { AboutData } from "../interfaces";
-import { Loading } from "../components/Loading";
+import { Loading } from "../components/loading";
 
 export default function AboutComponent() {
   const [loading, setLoading] = useState(true);

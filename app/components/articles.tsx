@@ -3,7 +3,7 @@ import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
 import { Article } from "../interfaces/index";
-import { Loading } from "../components/Loading";
+import { Loading } from "../components/loading";
 
 export default function ArticlesComponent() {
   const [loading, setLoading] = useState(true);

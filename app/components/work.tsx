@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
 import { Work } from "../interfaces/index";
-import { Loading } from "../components/Loading";
+import { Loading } from "../components/loading";
 
 export default function WorkComponent() {
   const [loading, setLoading] = useState(true);
