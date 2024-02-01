@@ -5,13 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "test": "jest",
-    "css:dev": "sass styles/tailwind.scss -o public/styles.css",
-    "css:build": "sass styles/tailwind.scss --no-source-map --style compressed -o public/styles.css",
-    "build:css": "npm run css:build",
-    "watch:css": "sass --watch styles/tailwind.scss -o public/styles.css",
-    "postinstall": "npm run build:css"
+    "start": "next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
