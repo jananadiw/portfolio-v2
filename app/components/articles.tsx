@@ -26,7 +26,7 @@ export default function ArticlesComponent() {
 
   useEffect(() => {
     getData().then((data) => setArticles(data));
-  }, []);
+  });
 
   return (
     <section
@@ -38,14 +38,12 @@ export default function ArticlesComponent() {
       ) : (
         articles.map((article: any, index: number) => (
           <Link
+            key={article.id}
             target="_blank"
             rel="noreferrer noopener"
             href={`${article.url}`}
           >
-            <div
-              key={index}
-              className="p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow flex mb-10"
-            >
+            <div className="p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow flex mb-10">
               <div className="w-1/4">
                 <Image
                   width={100}

@@ -27,7 +27,7 @@ export default function ProjectsComponent() {
 
   useEffect(() => {
     getData().then((data) => setProjects(data));
-  }, []);
+  });
 
   return (
     <section
@@ -39,14 +39,12 @@ export default function ProjectsComponent() {
       ) : (
         projects.map((project: any, index: number) => (
           <Link
+            key={index}
             target="_blank"
             rel="noreferrer noopener"
             href={`${project.url}`}
           >
-            <div
-              key={index}
-              className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10"
-            >
+            <div className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10">
               <div className="w-1/4">
                 <Image
                   width={100}

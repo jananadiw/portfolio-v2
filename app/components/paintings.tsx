@@ -56,7 +56,7 @@ export default function PaintingsComponent() {
           />
         </div>
       </div>
-      <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-600">
+      <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-300">
         <p className={`text-lg ${outfit.className}`}>
           <Link
             href="https://www.canvasconfetti.com/"

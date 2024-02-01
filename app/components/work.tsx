@@ -26,7 +26,7 @@ export default function WorkComponent() {
 
   useEffect(() => {
     getData().then((data) => setExperience(data));
-  }, []);
+  });
 
   return (
     <section
@@ -37,11 +37,13 @@ export default function WorkComponent() {
         <Loading componentName={"work"} />
       ) : (
         experience.map((item: any, index: number) => (
-          <Link target="_blank" rel="noreferrer noopener" href={`${item.url}`}>
-            <div
-              key={index}
-              className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10"
-            >
+          <Link
+            key={index}
+            target="_blank"
+            rel="noreferrer noopener"
+            href={`${item.url}`}
+          >
+            <div className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10">
               <div
                 className={`w-1/4 text-slate-300 text-md ${outfit.className}`}
               >
