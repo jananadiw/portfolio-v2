@@ -12,7 +12,6 @@ const config: Config = {
         'regal-blue': '#EAEAEA',
         'regal-yellow': '#C0D6DF',
         'p-gray': '#BDBDBD',
-        // 'highlight': '#DE4F43',
         'test1': "#98c1d9",
         'test2': "#e0fbfc",
         'test3': '#3d5a80',
