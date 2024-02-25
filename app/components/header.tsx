@@ -31,7 +31,7 @@ export default function HeaderComponent() {
   }, []);
   return (
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-      <div>
+      <div className={`${outfit.className}`}>
         <h1
           className={`text-5xl font-bold sm:text-5x text-orange-700 ${outfit.className}`}
         >

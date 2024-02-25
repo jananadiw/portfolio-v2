@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { inter, youngSerif, outfit } from "../styles/font";
+import { outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
@@ -57,7 +57,7 @@ export default function PaintingsComponent() {
         </div>
       </div>
       <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-300">
-        <p className={`text-lg ${outfit.className}`}>
+        <div className={`text-lg ${outfit.className}`}>
           <Link
             href="https://www.canvasconfetti.com/"
             target="_blank"
@@ -65,7 +65,7 @@ export default function PaintingsComponent() {
           >
             See More Paintings
           </Link>
-        </p>
+        </div>
         <ArrowUpRightIcon className="h-4 w-4 text-test" />
       </div>
     </section>

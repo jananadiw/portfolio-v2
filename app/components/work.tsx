@@ -95,11 +95,11 @@ export default function WorkComponent() {
         ))
       )}
       <div className="flex gap-2 inline-block items-center hover:text-orange-300">
-        <p className={`text-xl font-extrabold	${outfit.className}`}>
+        <div className={`text-xl font-extrabold	${outfit.className}`}>
           <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             See Detailed Resume
           </Link>
-        </p>
+        </div>
         <ArrowUpRightIcon className="h-4 w-4 text-test" />
       </div>
     </section>
