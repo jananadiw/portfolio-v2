@@ -11,7 +11,7 @@ export const youngSerif = Young_Serif({
 
 export const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['100', '200']
+  weight: ['100','200']
 })
 
 export const playfairDisplay = Playfair_Display({
