@@ -82,7 +82,7 @@ export default function HeaderComponent() {
             >
               <a className="group flex items-center py-1" href="#paintings">
                 <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">
-                  Paintings
+                  Artwork
                 </p>
               </a>
             </li>
