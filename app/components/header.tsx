@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { inter, youngSerif, outfit, playfairDisplay } from "../styles/font";
+import { outfit } from "../styles/font";
 import Link from "next/link";
 
 export default function HeaderComponent() {
@@ -33,7 +33,7 @@ export default function HeaderComponent() {
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1
-          className={`text-5xl font-bold  sm:text-5x text-orange-700 ${outfit.className}`}
+          className={`text-5xl font-bold sm:text-5x text-orange-700 ${outfit.className}`}
         >
           Hey!
         </h1>

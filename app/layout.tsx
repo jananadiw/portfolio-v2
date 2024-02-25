@@ -1,8 +1,8 @@
 import "../app/styles/globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jananadi W",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }

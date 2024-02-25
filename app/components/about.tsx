@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { inter, youngSerif, outfit } from "../styles/font";
+import { outfit } from "../styles/font";
 import { AboutData } from "../interfaces";
 import { Loading } from "../components/loading";
 
