@@ -40,7 +40,7 @@ export default function HeaderComponent() {
         <h2
           className={`mt-3 text-2xl font-medium text-test2 sm:text-4xl ${outfit.className}`}
         >
-          I&apos;m Jananadi
+          I&apos;m Jananadi (aka CJ)
         </h2>
         <p
           className={`mt-2 max-w-xs leading-normal text-test1 text-xl ${outfit.className}`}
