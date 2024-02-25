@@ -77,7 +77,7 @@ export default function ProjectsComponent() {
         ))
       )}
       <div className="flex gap-2 inline-block items-center hover:text-orange-300">
-        <div className={`text-lg font-extrabold ${outfit.className}`}>
+        <p className={`text-lg font-extrabold ${outfit.className}`}>
           <Link
             href="https://github.com/jananadiw"
             target="_blank"
@@ -85,7 +85,7 @@ export default function ProjectsComponent() {
           >
             See Github Profile
           </Link>
-        </div>
+        </p>
         <ArrowUpRightIcon className="h-4 w-4 text-test" />
       </div>
       <div className="mt-16">
