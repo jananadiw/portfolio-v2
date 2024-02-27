@@ -27,7 +27,7 @@ export default function ProjectsComponent() {
 
   useEffect(() => {
     getData().then((data) => setProjects(data));
-  });
+  }, []);
 
   return (
     <section

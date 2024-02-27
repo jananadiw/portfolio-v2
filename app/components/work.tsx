@@ -26,7 +26,7 @@ export default function WorkComponent() {
 
   useEffect(() => {
     getData().then((data) => setExperience(data));
-  });
+  }, []);
 
   return (
     <section

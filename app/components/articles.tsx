@@ -25,7 +25,7 @@ export default function ArticlesComponent() {
 
   useEffect(() => {
     getData().then((data) => setArticles(data));
-  });
+  }, []);
 
   return (
     <section
