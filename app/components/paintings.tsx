@@ -16,7 +16,7 @@ export default function PaintingsComponent() {
             width={300}
             height={400}
             src={
-              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/girl.jpg"
+              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/1_Girl_and_her_coffee.jpg"
             }
             alt="artwork"
             style={{ maxWidth: "100%", height: "100%" }}
@@ -27,7 +27,7 @@ export default function PaintingsComponent() {
             width={300}
             height={400}
             src={
-              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/mermaid.jpg"
+              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/6_Serenity_in_submersion.jpg"
             }
             alt="artwork2"
             style={{ maxWidth: "100%", height: "100%" }}
@@ -36,7 +36,7 @@ export default function PaintingsComponent() {
         <div className="rounded-xl overflow-hidden">
           <Image
             src={
-              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/workday.jpg"
+              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/8_Digital_reflections.jpg"
             }
             alt="artwork3"
             width={300}
@@ -49,7 +49,7 @@ export default function PaintingsComponent() {
             width={300}
             height={400}
             src={
-              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/hike.jpg"
+              "https://janawcontent.s3.ap-northeast-2.amazonaws.com/2_Into_the_wild.jpg"
             }
             alt="artwork1"
             style={{ maxWidth: "100%", height: "100%" }}
