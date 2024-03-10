@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@vercel/analytics": "^1.2.2",
     "classnames": "^2.5.1",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
