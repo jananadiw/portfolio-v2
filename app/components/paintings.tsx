@@ -59,7 +59,7 @@ export default function PaintingsComponent() {
       <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-300">
         <p className={`text-lg ${outfit.className}`}>
           <Link
-            href="https://www.canvasconfetti.com/"
+            href="https://www.canvasconfetti.art/"
             target="_blank"
             rel="noopener noreferrer"
           >
