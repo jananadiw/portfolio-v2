@@ -3,8 +3,7 @@
 [![Package - next](https://img.shields.io/github/package-json/dependency-version/plutach/portfolio/next?color=blue)](https://www.npmjs.com/package/next)
 [![Deployed with - Vercel](https://img.shields.io/badge/Deployed_with-Vercel-black)](https://)
 
-> A simple personal portfolio website to showcase and organize important personal and work projects all in one place, built with NextJs, Tailwind CSS, [next-translate](https://github.com/aralroca/next-translate) & [react-toggle-dark-mode](https://www.npmjs.com/package/react-toggle-dark-mode).
-
+> A simple, single page personal portfolio website to showcase and organize important personal and work projects all in one place, built with NextJs & Tailwind CSS
 ## Preview
 <img src="/public/preview.png" width="800"/>
 
