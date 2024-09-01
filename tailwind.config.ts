@@ -9,15 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'regal-blue': '#EAEAEA',
-        'regal-yellow': '#C0D6DF',
-        'p-gray': '#BDBDBD',
-        'test1': "#98c1d9",
+        // 'test1': "#98c1d9",
+        'test1': "#cffcf8",
         'test2': "#e0fbfc",
-        'test3': '#3d5a80',
-        'test4': '#ee6c4d',
-        'test5': '#94a3b80f',
-        'highlight':'#b5d9e6'
+        // 'test5': '#94a3b80f',
+        'test5': '#0b16241f',
       },
     },
   },

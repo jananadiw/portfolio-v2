@@ -33,19 +33,20 @@ export default function HeaderComponent() {
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1
-          className={`text-5xl font-bold sm:text-5x text-orange-700 ${outfit.className}`}
+          className={`text-5xl font-bold sm:text-5x text-red-400 ${outfit.className}`}
         >
           Hey!
         </h1>
         <h2
           className={`mt-3 text-2xl font-medium text-test2 sm:text-4xl ${outfit.className}`}
         >
-          I&apos;m Jananadi (aka CJ)
+          I&apos;m Jananadi
         </h2>
         <p
           className={`mt-2 max-w-xs leading-normal text-test1 text-xl ${outfit.className}`}
         >
-          I create web experiences that are accessible and inclusive for all
+          I love creating web experiences that are accessible and inclusive for
+          all
         </p>
         <nav className={`nav hidden lg:block ${outfit.className} text-xl`}>
           <ul className="mt-16 w-max">
