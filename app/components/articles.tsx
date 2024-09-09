@@ -4,6 +4,7 @@ import { outfit } from "../styles/font";
 import Link from "next/link";
 import { Article } from "../interfaces/index";
 import { Loading } from "../components/loading";
+import { motion } from "framer-motion";
 
 export default function ArticlesComponent() {
   const [loading, setLoading] = useState(true);
@@ -42,7 +43,10 @@ export default function ArticlesComponent() {
             rel="noreferrer noopener"
             href={`${article.url}`}
           >
-            <div className="p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow flex mb-10">
+            <motion.div
+              className="p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow flex mb-10"
+              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+            >
               <div className="w-1/4">
                 <Image
                   width={100}
@@ -56,7 +60,7 @@ export default function ArticlesComponent() {
                 <h3>{article.year}</h3>
                 <p className="text-test1 mt-2">{article.name}</p>
               </div>
-            </div>
+            </motion.div>
           </Link>
         ))
       )}

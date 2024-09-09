@@ -3,6 +3,7 @@ import Image from "next/image";
 import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 
 export default function PaintingsComponent() {
   return (
@@ -11,7 +12,10 @@ export default function PaintingsComponent() {
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
       <div className="grid grid-rows-2 grid-flow-col gap-4">
-        <div className="rounded-xl overflow-hidden">
+        <motion.div
+          className="rounded-xl overflow-hidden"
+          whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+        >
           <Image
             width={300}
             height={400}
@@ -21,8 +25,11 @@ export default function PaintingsComponent() {
             alt="artwork"
             style={{ maxWidth: "100%", height: "100%" }}
           />
-        </div>
-        <div className="rounded-xl overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="rounded-xl overflow-hidden"
+          whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+        >
           <Image
             width={300}
             height={400}
@@ -32,8 +39,11 @@ export default function PaintingsComponent() {
             alt="artwork2"
             style={{ maxWidth: "100%", height: "100%" }}
           />
-        </div>
-        <div className="rounded-xl overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="rounded-xl overflow-hidden"
+          whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+        >
           <Image
             src={
               "https://janawcontent.s3.ap-northeast-2.amazonaws.com/8_Digital_reflections.jpg"
@@ -43,8 +53,11 @@ export default function PaintingsComponent() {
             height={400}
             style={{ maxWidth: "100%", height: "100%" }}
           />
-        </div>
-        <div className="rounded-xl overflow-hidden">
+        </motion.div>
+        <motion.div
+          className="rounded-xl overflow-hidden"
+          whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+        >
           <Image
             width={300}
             height={400}
@@ -54,9 +67,12 @@ export default function PaintingsComponent() {
             alt="artwork1"
             style={{ maxWidth: "100%", height: "100%" }}
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="mt-10 flex gap-2 inline-block items-center hover:text-orange-300">
+      <motion.div
+        className="mt-10 flex gap-2 inline-block font-bold items-center hover:text-orange-300"
+        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+      >
         <p className={`text-lg ${outfit.className}`}>
           <Link
             href="https://www.canvasconfetti.art/"
@@ -67,7 +83,7 @@ export default function PaintingsComponent() {
           </Link>
         </p>
         <ArrowUpRightIcon className="h-4 w-4 text-test" />
-      </div>
+      </motion.div>
     </section>
   );
 }

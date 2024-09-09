@@ -5,6 +5,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
 import { Work } from "../interfaces/index";
 import { Loading } from "../components/loading";
+import { motion } from "framer-motion";
 
 export default function WorkComponent() {
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,10 @@ export default function WorkComponent() {
             rel="noreferrer noopener"
             href={`${item.url}`}
           >
-            <div className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10">
+            <motion.div
+              className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10"
+              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+            >
               <div
                 className={`w-1/4 text-slate-300 text-md ${outfit.className}`}
               >
@@ -90,18 +94,21 @@ export default function WorkComponent() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </Link>
         ))
       )}
-      <div className="flex gap-2 inline-block items-center hover:text-orange-300">
+      <motion.div
+        className="flex gap-2 inline-block font-bold items-center hover:text-orange-300"
+        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+      >
         <p className={`text-xl font-extrabold	${outfit.className}`}>
           <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             See Detailed Resume
           </Link>
         </p>
         <ArrowUpRightIcon className="h-4 w-4 text-test" />
-      </div>
+      </motion.div>
     </section>
   );
 }
