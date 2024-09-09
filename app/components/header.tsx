@@ -20,7 +20,7 @@ export default function HeaderComponent() {
       }
     );
 
-    // add each section (with an Id) to be observed
+    // Add each section (with an Id) to be observed
     document.querySelectorAll("section").forEach((section) => {
       observer.observe(section);
     });
@@ -29,6 +29,11 @@ export default function HeaderComponent() {
       observer.disconnect();
     };
   }, []);
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
@@ -45,44 +50,67 @@ export default function HeaderComponent() {
         <p
           className={`mt-2 max-w-xs leading-normal text-test1 text-xl ${outfit.className}`}
         >
-          I love creating web experiences that are accessible and inclusive for
-          all
+          Passionate about building dynamic, user-centric web experiences that
+          engage and include everyone.
         </p>
         <nav className={`nav hidden lg:block ${outfit.className} text-xl`}>
           <ul className="mt-16 w-max">
-            <li className={activeLink === "about" ? "text-2xl text-test2" : ""}>
-              <a className="group flex items-center py-1" href="#about">
-                <p className="hover:text-test2 hover:text-xl text-test1 transition-size duration-300">
+            <li
+              className={`${
+                activeLink === "about" ? "text-[#d5b3b3]" : "text-test1"
+              } transition-colors duration-300`}
+            >
+              <a
+                className="group flex items-center py-1"
+                href="#about"
+                onClick={() => handleLinkClick("about")}
+              >
+                <p className="hover:text-[#f87171] transition-colors duration-300">
                   About
                 </p>
               </a>
             </li>
-            <li className={activeLink === "work" ? "text-2xl text-test2" : ""}>
+            <li
+              className={`${
+                activeLink === "work" ? "text-[#d5b3b3]" : "text-test1"
+              } transition-colors duration-300`}
+            >
               <a
-                className="group flex items-center py-1 text-test1"
+                className="group flex items-center py-1"
                 href="#work"
+                onClick={() => handleLinkClick("work")}
               >
-                <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">
+                <p className="hover:text-[#f87171] transition-colors duration-300">
                   Work
                 </p>
               </a>
             </li>
             <li
-              className={activeLink === "projects" ? "text-2xl text-test2" : ""}
+              className={`${
+                activeLink === "projects" ? "text-[#d5b3b3]" : "text-test1"
+              } transition-colors duration-300`}
             >
-              <a className="group flex items-center py-1" href="#projects">
-                <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">
+              <a
+                className="group flex items-center py-1"
+                href="#projects"
+                onClick={() => handleLinkClick("projects")}
+              >
+                <p className="hover:text-[#f87171] transition-colors duration-300">
                   Projects
                 </p>
               </a>
             </li>
             <li
-              className={
-                activeLink === "paintings" ? "text-2xl text-test2" : ""
-              }
+              className={`${
+                activeLink === "paintings" ? "text-[#d5b3b3]" : "text-test1"
+              } transition-colors duration-300`}
             >
-              <a className="group flex items-center py-1" href="#paintings">
-                <p className="hover:text-test2 text-test1 hover:text-xl transition-size duration-300">
+              <a
+                className="group flex items-center py-1"
+                href="#paintings"
+                onClick={() => handleLinkClick("paintings")}
+              >
+                <p className="hover:text-[#f87171] transition-colors duration-300">
                   Artwork
                 </p>
               </a>
