@@ -30,7 +30,7 @@ export default function HeaderComponent() {
     };
   }, []);
 
-  const handleLinkClick = (link) => {
+  const handleLinkClick = (link: string) => {
     setActiveLink(link);
   };
 
