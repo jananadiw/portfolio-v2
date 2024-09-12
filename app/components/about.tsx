@@ -27,7 +27,7 @@ export default function AboutComponent() {
 
   useEffect(() => {
     getData().then((data) => setAbout(data));
-  }, []);
+  }, [getData]);
 
   return (
     <section

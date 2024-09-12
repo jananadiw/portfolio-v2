@@ -29,7 +29,7 @@ export default function ProjectsComponent() {
 
   useEffect(() => {
     getData().then((data) => setProjects(data));
-  }, []);
+  }, [getData]);
 
   return (
     <section
