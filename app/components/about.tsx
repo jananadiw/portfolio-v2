@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { outfit } from "../styles/font";
-import { AboutData } from "../interfaces";
+import { AboutData } from "../types";
 import { Loading } from "../components/loading";
 
 export default function AboutComponent() {
@@ -27,7 +27,7 @@ export default function AboutComponent() {
 
   useEffect(() => {
     getData().then((data) => setAbout(data));
-  }, [getData]);
+  }, []);
 
   return (
     <section
@@ -39,23 +39,23 @@ export default function AboutComponent() {
       ) : (
         <>
           <p
-            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+            className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
           ></p>
           <br />
           <p
-            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+            className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
           >
             {about.past}
           </p>
           <br />
           <p
-            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+            className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
           >
             {about.present}
           </p>
           <br />
           <p
-            className={`text-test1 ${outfit.className} text-lg text-slate-400`}
+            className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
           >
             {about.outofwork}
           </p>

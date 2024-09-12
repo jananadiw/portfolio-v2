@@ -1,4 +1,4 @@
-export interface Work {
+export type Work = {
     time: string;
     title: string;
     workplace: string;
@@ -7,16 +7,19 @@ export interface Work {
     stack: [];
 }
 
-export interface Project {
+export type Project = {
     id: number;
     name: string;
 }
-export interface Article {
-    name: string;
+export type Article = {
+    id: number;
+    url:string;
+    headline: string;
     year: number;
+    image: string;
 }
 
-export interface AboutData {
+export type AboutData = {
     past: string;
     present: string;
     outofwork: string;

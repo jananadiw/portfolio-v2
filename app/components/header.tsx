@@ -38,7 +38,7 @@ export default function HeaderComponent() {
     <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1
-          className={`text-5xl font-bold sm:text-5x text-red-400 ${outfit.className}`}
+          className={`text-5xl font-bold sm:text-5xl lg:text-6xl text-red-400 ${outfit.className}`}
         >
           Hey!
         </h1>
@@ -118,7 +118,7 @@ export default function HeaderComponent() {
           </ul>
         </nav>
       </div>
-      <ul className="ml-1 mt-8 flex items-center">
+      <ul className="mt-8 flex items-center">
         <li className="mr-5 text-xs">
           <div className="icon-container">
             <Link
@@ -126,7 +126,12 @@ export default function HeaderComponent() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image width={32} height={32} alt="test" src="icons/github.svg" />
+              <Image
+                width={40}
+                height={40}
+                alt="github_icon"
+                src="icons/github.svg"
+              />
             </Link>
           </div>
         </li>
@@ -138,9 +143,9 @@ export default function HeaderComponent() {
               rel="noopener noreferrer"
             >
               <Image
-                width={28}
-                height={28}
-                alt="test"
+                width={36}
+                height={36}
+                alt="linkedIn icon"
                 src="icons/linkedIn.svg"
               />
             </Link>
@@ -154,9 +159,9 @@ export default function HeaderComponent() {
               rel="noopener noreferrer"
             >
               <Image
-                width={32}
-                height={32}
-                alt="test"
+                width={40}
+                height={40}
+                alt="twitter_icon"
                 src="icons/twitter.svg"
               />
             </Link>
@@ -169,7 +174,7 @@ export default function HeaderComponent() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image width={32} height={32} alt="test" src="icons/ig.svg" />
+              <Image width={40} height={40} alt="ig_icon" src="icons/ig.svg" />
             </Link>
           </div>
         </li>

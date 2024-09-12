@@ -3,9 +3,10 @@ import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
-import { Work } from "../interfaces/index";
-import { Loading } from "../components/loading";
+import { Work } from "../types";
+import { Loading } from "./loading";
 import { motion } from "framer-motion";
+import ViewMore from "./viewMore";
 
 export default function WorkComponent() {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ export default function WorkComponent() {
   return (
     <section
       id="work"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24 "
     >
       {loading ? (
         <Loading componentName={"work"} />
@@ -44,71 +45,63 @@ export default function WorkComponent() {
             rel="noreferrer noopener"
             href={`${item.url}`}
           >
-            <motion.div
-              className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10"
-              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-            >
-              <div
-                className={`w-1/4 text-slate-300 text-md ${outfit.className}`}
+            <div className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10">
+              <motion.div
+                className="flex w-full p-4"
+                whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
               >
-                {item.time}
-              </div>
-              <div
-                className={`text-test1 text-lg ${outfit.className} w-3/4 ml-4`}
-              >
-                <h3 className="text-slate-300 group-hover:text-orange-600">
-                  {item.title} - {item.workplace}
-                </h3>
-                <p className="mt-4 text-test1">{item.detail}</p>
                 <div
-                  className={`mt-4 flex flex-row gap-4 ${outfit.className} text-sm text-slate-100`}
+                  className={`w-1/4 text-slate-300 text-md ${outfit.className}`}
                 >
-                  {item.projects.map((project: any, i: number) => (
-                    <div
-                      key={i}
-                      className="flex items-center group-hover:text-orange-300"
-                    >
-                      <>
-                        <PaperClipIcon className="h-4 w-4 mr-1" />
-                        <Link
-                          href={`${project.url}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {project.name}
-                        </Link>
-                      </>
-                    </div>
-                  ))}
+                  {item.time}
                 </div>
                 <div
-                  className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
+                  className={`text-test1 text-lg ${outfit.className} w-3/4 ml-4`}
                 >
-                  {item.stack.map((tech: string, i: number) => (
-                    <div
-                      key={i}
-                      className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-600 py-0.5 px-2 text-sm text-green-100"
-                    >
-                      {tech}
-                    </div>
-                  ))}
+                  <h3 className="text-slate-300 group-hover:text-red-300">
+                    {item.title} - {item.workplace}
+                  </h3>
+                  <p className="mt-4 text-test1">{item.detail}</p>
+                  <div
+                    className={`mt-4 flex flex-row gap-4 ${outfit.className} text-base md:text-sm text-slate-100`}
+                  >
+                    {item.projects.map((project: any, i: number) => (
+                      <div
+                        key={i}
+                        className="flex items-center group-hover:text-red-300"
+                      >
+                        <>
+                          <PaperClipIcon className="h-4 w-4 mr-1" />
+                          <Link
+                            href={`${project.url}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {project.name}
+                          </Link>
+                        </>
+                      </div>
+                    ))}
+                  </div>
+                  <div
+                    className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
+                  >
+                    {item.stack.map((tech: string, i: number) => (
+                      <div
+                        key={i}
+                        className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-cyan-900 py-0.5 px-2 text-base text-green-100"
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </Link>
         ))
       )}
-      <motion.div
-        className="flex gap-2 inline-block font-bold items-center hover:text-orange-300"
-        whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-      >
-        <p className={`text-xl font-extrabold	${outfit.className}`}>
-          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            See Detailed Resume
-          </Link>
-        </p>
-        <ArrowUpRightIcon className="h-4 w-4 text-test" />
-      </motion.div>
+      <ViewMore text={"See Detailed Resume"} type={"work"} />
     </section>
   );
 }
