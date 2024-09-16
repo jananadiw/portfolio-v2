@@ -7,6 +7,7 @@ import { Work } from "../types";
 import { Loading } from "./loading";
 import { motion } from "framer-motion";
 import ViewMore from "./viewMore";
+import Image from "next/image";
 
 export default function WorkComponent() {
   const [loading, setLoading] = useState(true);
@@ -45,32 +46,40 @@ export default function WorkComponent() {
         experience.map((item: any, index: number) => (
           <div
             key={index}
-            className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10 cursor-pointer"
+            className="group p-2 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10 cursor-pointer"
             onClick={() => handleItemClick(item.url)}
           >
             <motion.div
               className="flex w-full p-4"
               whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
             >
-              <div
-                className={`w-1/4 text-slate-300 text-md ${outfit.className}`}
-              >
+              {/* <div className={`text-slate-300 text-md ${outfit.className}`}>
                 {item.time}
-              </div>
-              <div
-                className={`text-test1 text-lg ${outfit.className} w-3/4 ml-4`}
-              >
+              </div> */}
+              <div className={`text-test1 text-lg ${outfit.className} ml-4`}>
+                {/* <h3 className={`text-slate-300 text-md ${outfit.className}`}>
+                  {item.time}{" "}
+                </h3> */}
                 <h3 className="text-slate-300 group-hover:text-red-300">
                   {item.title} - {item.workplace}
                 </h3>
                 <p className="mt-4 text-test1">{item.detail}</p>
+                <div className="w-full mt-4">
+                  <Image
+                    width={500}
+                    height={400}
+                    alt="thumbnail"
+                    src="/workProjects/bridge.png"
+                    className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                  />
+                </div>
                 <div
-                  className={`mt-4 flex flex-row gap-4 ${outfit.className} text-base md:text-sm text-slate-100`}
+                  className={`mt-4 flex flex-row gap-3 ${outfit.className} text-sm text-slate-100`}
                 >
                   {item.projects.map((project: any, i: number) => (
                     <div
                       key={i}
-                      className="flex items-center group-hover:text-red-300"
+                      className="flex items-center group-hover:text-teal-300"
                     >
                       <PaperClipIcon className="h-4 w-4 mr-1" />
                       <Link
