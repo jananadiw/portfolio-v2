@@ -31,10 +31,6 @@ export default function WorkComponent() {
     getData().then((data) => setExperience(data));
   }, [getData]);
 
-  const handleItemClick = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <section
       id="work"
@@ -44,68 +40,61 @@ export default function WorkComponent() {
         <Loading componentName={"work"} />
       ) : (
         experience.map((item: any, index: number) => (
-          <div
-            key={index}
-            className="group p-2 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10 cursor-pointer"
-            onClick={() => handleItemClick(item.url)}
-          >
-            <motion.div
-              className="flex w-full p-4"
-              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-            >
-              {/* <div className={`text-slate-300 text-md ${outfit.className}`}>
-                {item.time}
-              </div> */}
+          <div key={index} className="group p-2 flex mb-12">
+            <div>
               <div className={`text-test1 text-lg ${outfit.className} ml-4`}>
-                {/* <h3 className={`text-slate-300 text-md ${outfit.className}`}>
-                  {item.time}{" "}
-                </h3> */}
-                <h3 className="text-slate-300 group-hover:text-red-300">
-                  {item.title} - {item.workplace}
-                </h3>
+                <Link
+                  href={`${item.url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 className="text-red-300 text-xl font-semibold">
+                    {item.title} - {item.workplace}
+                  </h3>
+                </Link>
                 <p className="mt-4 text-test1">{item.detail}</p>
-                <div className="w-full mt-4">
-                  <Image
-                    width={500}
-                    height={400}
-                    alt="thumbnail"
-                    src="/workProjects/bridge.png"
-                    className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                  />
-                </div>
                 <div
-                  className={`mt-4 flex flex-row gap-3 ${outfit.className} text-sm text-slate-100`}
+                  className={`mt-4  gap-3 ${outfit.className} text-sm text-slate-100`}
                 >
                   {item.projects.map((project: any, i: number) => (
-                    <div
-                      key={i}
-                      className="flex items-center group-hover:text-teal-300"
-                    >
-                      <PaperClipIcon className="h-4 w-4 mr-1" />
-                      <Link
-                        href={`${project.url}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <div key={i} className=" items-center text-teal-300">
+                      <div className="w-full my-4">
+                        <Image
+                          width={500}
+                          height={400}
+                          alt="thumbnail"
+                          src={`/images/${project.preview}`}
+                          className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                        />
+                      </div>
+                      <div className="flex">
+                        <PaperClipIcon className="h-4 w-4 mr-1" />
+                        <Link
+                          href={`${project.url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.name}
+                        </Link>
+                      </div>
+
+                      <div
+                        className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
                       >
-                        {project.name}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-                <div
-                  className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
-                >
-                  {item.stack.map((tech: string, i: number) => (
-                    <div
-                      key={i}
-                      className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-cyan-900 py-0.5 px-2 text-base text-green-100"
-                    >
-                      {tech}
+                        {project.stack.map((tech: string, i: number) => (
+                          <div
+                            key={i}
+                            className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-cyan-900 py-0.5 px-2 text-base text-green-100"
+                          >
+                            {tech}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         ))
       )}
