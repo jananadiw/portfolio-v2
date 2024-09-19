@@ -51,20 +51,20 @@ export default function ProjectsComponent() {
                 className="flex w-full p-4"
                 whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
               >
-                <div className="w-1/4">
-                  <Image
-                    width={100}
-                    height={113}
-                    alt="thumbnail"
-                    src={`/images/${project.image}`}
-                    className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                  />
-                </div>
                 <div
-                  className={`${outfit.className} w-3/4 ml-4 text-lg group-hover:text-red-300`}
+                  className={`${outfit.className} text-lg group-hover:text-red-300`}
                 >
                   <h3>{project.name}</h3>
-                  <p className="text-test1 mt-2">{project.detail}</p>
+                  <p className="text-test1 my-2">{project.detail}</p>
+                  <div className="">
+                    <Image
+                      width={500}
+                      height={400}
+                      alt="thumbnail"
+                      src={`/images/${project.image}`}
+                      className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                    />
+                  </div>
                   <div
                     className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
                   >
