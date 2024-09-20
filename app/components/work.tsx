@@ -40,9 +40,9 @@ export default function WorkComponent() {
         <Loading componentName={"work"} />
       ) : (
         experience.map((item: any, index: number) => (
-          <div key={index} className="group flex mb-12">
+          <div key={index} className="group p-2 flex mb-12">
             <div>
-              <div className={`text-test1 text-lg ${outfit.className}`}>
+              <div className={`text-test1 text-lg ${outfit.className} ml-4`}>
                 <Link
                   href={`${item.url}`}
                   target="_blank"
@@ -58,10 +58,10 @@ export default function WorkComponent() {
                 >
                   {item.projects.map((project: any, i: number) => (
                     <div key={i} className=" items-center text-teal-300">
-                      <div className="my-4">
+                      <div className="w-full my-4">
                         <Image
                           width={500}
-                          height={300}
+                          height={400}
                           alt="thumbnail"
                           src={`/images/${project.preview}`}
                           className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
@@ -79,12 +79,12 @@ export default function WorkComponent() {
                       </div>
 
                       <div
-                        className={`mt-6 flex flex-wrap gap-2 ${outfit.className} text-sm`}
+                        className={`mt-6 flex flex-wrap gap-4 ${outfit.className} text-sm`}
                       >
                         {project.stack.map((tech: string, i: number) => (
                           <div
                             key={i}
-                            className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-cyan-900 py-0.5 px-2 text-sm text-green-100"
+                            className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-cyan-900 py-0.5 px-2 text-base text-green-100"
                           >
                             {tech}
                           </div>
