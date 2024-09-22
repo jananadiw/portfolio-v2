@@ -1,10 +1,10 @@
 "use client";
 
-import About from "./components/About";
-import DataProvider from "./components/DataProvider";
-import Paintings from "./components/Paintings";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import About from "@/components/About";
+import DataProvider from "@/components/DataProvider";
+import Paintings from "@/components/Paintings";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
