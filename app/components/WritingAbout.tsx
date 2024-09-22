@@ -5,7 +5,11 @@ import Link from "next/link";
 import { ArticleData } from "../types";
 import { motion } from "framer-motion";
 
-export default function Articles({ articles }: { articles: ArticleData[] }) {
+export default function WritingAbout({
+  articles,
+}: {
+  articles: ArticleData[];
+}) {
   return (
     <section
       id="projects"

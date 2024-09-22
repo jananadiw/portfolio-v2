@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 import Image from "next/image";
 
-export default function Work({ experience }: { experience: WorkData[] }) {
+export default function Experience({ experience }: { experience: WorkData[] }) {
   return (
     <section
       id="work"

@@ -7,7 +7,7 @@ import { ProjectData } from "../types";
 import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 
-export default function Projects({ projects }: { projects: ProjectData[] }) {
+export default function SideOn({ projects }: { projects: ProjectData[] }) {
   return (
     <section
       id="projects"
