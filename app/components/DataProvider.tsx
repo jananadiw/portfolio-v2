@@ -3,16 +3,23 @@
 import { useEffect, useState } from "react";
 import Work from "./Work";
 import Projects from "./Projects";
-import Article from "./Articles";
+import Articles from "./Articles";
 import Loading from "./Loading";
+import { WorkData, ProjectData, ArticleData } from "../types";
+
+interface Data {
+  experience: WorkData[];
+  projects: ProjectData[];
+  articles: ArticleData[];
+}
 
 export default function DataProvider() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data | null>(null);
 
   useEffect(() => {
     fetch("/api/data")
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((fetchedData: Data) => setData(fetchedData));
   }, []);
 
   if (!data) return <Loading componentName="work" />;
@@ -20,8 +27,8 @@ export default function DataProvider() {
   return (
     <>
       <Work experience={data.experience} />
-      <Projects projects={data.project} />
-      <Article articles={data.articles} />
+      <Projects projects={data.projects} />
+      <Articles articles={data.articles} />
     </>
   );
 }
