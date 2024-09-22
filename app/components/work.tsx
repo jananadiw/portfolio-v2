@@ -3,12 +3,12 @@ import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
-import { Work } from "../types";
+import { WorkData } from "../types";
 import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 import Image from "next/image";
 
-export default function Work({ experience }: { experience: Work[] }) {
+export default function Work({ experience }: { experience: WorkData[] }) {
   return (
     <section
       id="work"

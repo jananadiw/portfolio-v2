@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { outfit } from "../styles/font";
 import { AboutData } from "../types";
-import { Loading } from "../components/loading";
 
 export default function About() {
   const about = {

@@ -1,4 +1,4 @@
-export type Work = {
+export type WorkData = {
     time: string;
     title: string;
     workplace: string;
@@ -7,11 +7,11 @@ export type Work = {
     stack: [];
 }
 
-export type Project = {
+export type ProjectData = {
     id: number;
     name: string;
 }
-export type Article = {
+export type ArticleData = {
     id: number;
     url:string;
     headline: string;

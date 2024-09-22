@@ -3,13 +3,11 @@ import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { Project } from "../types";
-import { Loading } from "./loading";
-import Articles from "./articles";
+import { ProjectData } from "../types";
 import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 
-export default function Projects({ projects }: { projects: Project[] }) {
+export default function Projects({ projects }: { projects: ProjectData[] }) {
   return (
     <section
       id="projects"

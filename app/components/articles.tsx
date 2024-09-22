@@ -2,11 +2,10 @@ import React, { useEffect, useState, use, useCallback } from "react";
 import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
-import { Article } from "../types";
-import { Loading } from "./loading";
+import { ArticleData } from "../types";
 import { motion } from "framer-motion";
 
-export default function Articles({ articles }: { articles: Article[] }) {
+export default function Articles({ articles }: { articles: ArticleData[] }) {
   return (
     <section
       id="projects"
