@@ -10,6 +10,11 @@ export type WorkData = {
 export type ProjectData = {
     id: number;
     name: string;
+    url?:string;
+    detail?:string;
+    preview?:string;
+    stack?: string[];
+
 }
 export type ArticleData = {
     id: number;
