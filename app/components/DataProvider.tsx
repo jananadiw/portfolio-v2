@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Work from "./Work";
-import Projects from "./Projects";
-import Articles from "./Articles";
+import Work from "./work";
+import Projects from "./projects";
+import Articles from "./articles";
 import Loading from "./Loading";
 import { WorkData, ProjectData, ArticleData } from "../types";
 
