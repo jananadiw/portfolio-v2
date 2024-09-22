@@ -1,7 +1,7 @@
 import React from "react";
 import { outfit } from "../styles/font";
 
-export default function FooterComponent() {
+export default function Footer() {
   return (
     <div>
       <p className={`${outfit.className} text-slate-300 text-lg `}>

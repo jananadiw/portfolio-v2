@@ -1,0 +1,120 @@
+{
+    "experience": [
+      {
+        "time": "Jan - Aug 2023",
+        "title": "Front End Engineer",
+        "workplace": "Tokamak Network",
+        "url": "https://www.tokamak.network/#/",
+        "detail": "Collaborated with a team of designers and project managers to implement user-friendly interfaces for blockchain web applications in a DeFi (decentralized finance) environment.",
+        "projects": [
+          {
+            "name": "Bridge & Swap",
+            "url": "https://bridge.tokamak.network/",
+            "preview": "Tokamak_Bridge.png",
+            "stack": ["Typescript", "ReactJs", "NextJS", "GraphQL", "Chakra UI", "Uniswap"]
+          },
+          {
+            "name": "Tonstarter",
+            "url": "https://tonstarter.tokamak.network/launch",
+            "preview": "Tokamak_Launchpad.png",
+            "stack": ["Typescript", "ReactJs", "GraphQL", "Chakra UI", "ethers.js", "Uniswap", "i18Next"]
+          },
+          {
+            "name": "L2 Mainnet",
+            "url": "https://titan.tokamak.network/",
+            "preview": "Tokamak_Landing.png",
+            "stack": ["Typescript", "ReactJs", "NextJs", "Chakra UI"]
+          }
+        ]
+      },
+      {
+        "time": "2020 - 2023",
+        "title": "Front End Engineer",
+        "workplace": "ONDA",
+        "url": "https://www.onda.me/",
+        "detail": "Developed projects, key features including Cost Management, Night Audit, Rate Adjustment, and Reservation Management for property management systems.",
+        "projects": [
+          {
+            "name": "ONDA PMS",
+            "url": "https://www.onda.me/hotel-plus",
+            "preview": "Onda_pms.png",
+            "stack": ["TypeScript", "VueJs", "NuxtJs", "SCSS", "GraphQL", "i18N", "Prisma", "Figma"]
+          },
+          {
+            "name": "Property Owner Inquiry Portal",
+            "url": "https://gsa-inquiries.onda.me/crystalvalleyccgoldenvillage",
+            "preview": "Onda_gsa.png",
+            "stack": ["TypeScript", "VueJs", "SCSS", "Google Sheets API", "GCP", "AWS Cloudfront"]
+          }
+        ]
+      },
+      {
+        "time": "2018 - 2020",
+        "title": "Back End Engineer",
+        "workplace": "Corners",
+        "url": "https://www.corners.co.kr/eng/",
+        "detail": "Developed web services for an Intelligent Evacuation System, enabling communication between LoRa devices and detecting high-decibel sounds, such as shooting incidents.",
+        "projects": [
+          {
+            "name": "IntelEvac",
+            "url": "https://www.corners.co.kr/page_eng/solution_03.php",
+            "preview": "Corners_Intelevac.png",
+            "stack": ["NodeJs", "JavaScript", "ExpressJs", "PostgreSQL", "AWS", "OAuth"]
+          },
+          {
+            "name": "InteleGuide",
+            "url": "https://www.corners.co.kr/page_eng/solution_02.php",
+            "preview": "Corners_Inteleguide.png",
+            "stack": ["Java", "PostgreSQL", "Maven", "Spring Boot", "IoT"]
+          }
+        ]
+      }
+    ],
+    "project": [
+      {
+        "name": "LinkMap",
+        "detail": "An AI-powered platform to enhance your LinkedIn networking. Easily extract and export your connections via a browser extension, and let AI categorize them for efficient management and nurturing.",
+        "stack": ["ReactJs", "NextJS", "Plasmo", "Vercel", "Product Design", "AWS Amplify", "Github Actions", "ShadCN UI", "Figma"],
+        "image": "LinkMap.png",
+        "url": "https://www.linkmap.app/"
+      },
+      {
+        "name": "Simple Crypto Wallet",
+        "detail": "A Next.js web app enables users to connect to their MetaMask wallet, check Ethereum and token balances, and send ethers or tokens to other addresses. Hosted on Vercel.",
+        "stack": ["React", "NextJS", "Truffle", "Solidity", "web3.js", "Metamask", "Vercel"],
+        "image": "Ethwallet.png",
+        "url": "https://ethwallet.vercel.app/"
+      },
+      {
+        "name": "Dev Portfolio",
+        "detail": "Personal development portfolio website supporting both English and Korean languages, with built-in support for dark and light themes. Hosted on Vercel & incorporates i18N for localization.",
+        "stack": ["TypeScript", "React", "SCSS", "NextJS", "JSON API", "Vercel", "i18N"],
+        "image": "Portfolio.png",
+        "url": "https://jananadi-portfolio.vercel.app/"
+      },
+      {
+        "name": "Canvas Confetti",
+        "detail": "Personal art portfolio site, created using JavaScript and Sass on Vue.js. AWS S3 & Cloudfront for distribution, and Github Actions for CI/CD.",
+        "stack": ["JavaScript", "SCSS", "Vue", "NuxtJs", "S3", "AWS Cloudfront", "Github Actions"],
+        "image": "CanvasConfetti.png",
+        "url": "https://www.canvasconfetti.art"
+      }
+    ],
+    "articles": [
+      {
+        "id": 1,
+        "headline": "AWS CloudFront Invalidation for modified objects.",
+        "year": 2021,
+        "image": "cloudfront.jpg",
+        "url": "https://jananadiw.medium.com/how-to-create-aws-cloudfront-invalidations-725e445b9816"
+      },
+      {
+        "id": 2,
+        "headline": "Deploy a static Vue, Nuxt.js website with AWS S3.",
+        "year": 2021,
+        "image": "article.jpg",
+        "url": "https://jananadiw.medium.com/deploy-a-static-vue-nuxt-js-website-with-aws-s3-4944570ccac6"
+      }
+    ]
+  }
+  

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ViewMore from "./viewMore";
+import ViewMore from "./ViewMore";
 
 const imageList = [
   {
@@ -26,7 +26,7 @@ const hoverEffect = {
   whileHover: { scale: 1.05, transition: { duration: 0.1 } },
 };
 
-export default function PaintingsComponent() {
+export default function Paintings() {
   return (
     <section
       id="paintings"

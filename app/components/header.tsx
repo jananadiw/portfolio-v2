@@ -3,7 +3,7 @@ import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
 
-export default function HeaderComponent() {
+export default function Header() {
   const [activeLink, setActiveLink] = useState("about");
 
   useEffect(() => {
