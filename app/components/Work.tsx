@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React from "react";
 import { inter, youngSerif, outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
@@ -8,7 +8,11 @@ import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 import Image from "next/image";
 
-export default function Experience({ experience }: { experience: WorkData[] }) {
+export default function WorkComponent({
+  experience,
+}: {
+  experience: WorkData[];
+}) {
   return (
     <section
       id="work"

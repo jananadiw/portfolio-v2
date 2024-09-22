@@ -1,11 +1,11 @@
-import React, { useEffect, useState, use, useCallback } from "react";
+import React from "react";
 import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
 import { ArticleData } from "../types";
 import { motion } from "framer-motion";
 
-export default function WritingAbout({
+export default function ArticleComponent({
   articles,
 }: {
   articles: ArticleData[];

@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Experience from "./Experience";
-import SideOn from "./SideOn";
-import WritingAbout from "./WritingAbout";
+import WorkComponent from "./Work";
+import ProjectsComponent from "./Projects";
+import ArticleComponent from "./Articles";
 import Loading from "./Loading";
 import { WorkData, ProjectData, ArticleData } from "../types";
 
@@ -26,9 +26,9 @@ export default function DataProvider() {
 
   return (
     <>
-      <Experience experience={data.experience} />
-      <SideOn projects={data.projects} />
-      <WritingAbout articles={data.articles} />
+      <WorkComponent experience={data.experience} />
+      <ProjectsComponent projects={data.projects} />
+      <ArticleComponent articles={data.articles} />
     </>
   );
 }

@@ -70,7 +70,7 @@
         ]
       }
     ],
-    "project": [
+    "projects": [
       {
         "name": "LinkMap",
         "detail": "An AI-powered platform to enhance your LinkedIn networking. Easily extract and export your connections via a browser extension, and let AI categorize them for efficient management and nurturing.",

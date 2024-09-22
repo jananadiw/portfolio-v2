@@ -1,4 +1,4 @@
-import React, { useEffect, useState, use, useCallback } from "react";
+import React from "react";
 import Image from "next/image";
 import { outfit } from "../styles/font";
 import Link from "next/link";
@@ -7,7 +7,11 @@ import { ProjectData } from "../types";
 import { motion } from "framer-motion";
 import ViewMore from "./ViewMore";
 
-export default function SideOn({ projects }: { projects: ProjectData[] }) {
+export default function ProjectsComponent({
+  projects,
+}: {
+  projects: ProjectData[];
+}) {
   return (
     <section
       id="projects"
