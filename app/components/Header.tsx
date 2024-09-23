@@ -1,7 +1,7 @@
 // components/Header.tsx
 import React, { useEffect, useState } from "react";
 import { outfit } from "../styles/font";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 import SocialIcons from "./SocialIcons";
 
 export default function Header() {
@@ -51,7 +51,7 @@ export default function Header() {
           Passionate about building dynamic, user-centric web experiences that
           engage and include everyone.
         </p>
-        <Navbar activeLink={activeLink} handleLinkClick={handleLinkClick} />
+        <NavBar activeLink={activeLink} handleLinkClick={handleLinkClick} />
       </div>
       <SocialIcons />
     </div>

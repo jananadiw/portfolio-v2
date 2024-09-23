@@ -7,7 +7,7 @@ interface NavbarProps {
   handleLinkClick: (link: string) => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
+const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
   const navItems = [
     { id: "about", label: "About" },
     { id: "work", label: "Work" },
@@ -41,4 +41,4 @@ const Navbar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;
