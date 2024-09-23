@@ -23,10 +23,10 @@
           },
           {
             "name": "L2 Mainnet",
-            "detail":"Designed and developed a simple, yet effective landing page that introduces the product and highlights its key services.",
+            "detail":"Implemented and enhanced UI/UX of the landing page that introduces the product and highlights its key services.",
             "url": "https://titan.tokamak.network/",
             "preview": "Tokamak_Landing.png",
-            "stack": ["Typescript", "ReactJs", "NextJs", "Chakra UI"]
+            "stack": ["Typescript", "NextJs","ReactJs", "Chakra UI", "Vercel"]
           }
         ]
       },
@@ -82,28 +82,28 @@
         "name": "LinkMap",
         "detail": "An AI-powered platform to enhance your LinkedIn networking. Easily extract and export your connections via a browser extension, and let AI categorize them for efficient management and nurturing.",
         "stack": ["ReactJs", "NextJS", "Plasmo", "Vercel", "Product Design", "AWS Amplify", "Github Actions", "ShadCN UI", "Figma"],
-        "image": "LinkMap.png",
+        "preview": "LinkMap.png",
         "url": "https://www.linkmap.app/"
       },
       {
         "name": "Simple Crypto Wallet",
         "detail": "A Next.js web app enables users to connect to their MetaMask wallet, check Ethereum and token balances, and send ethers or tokens to other addresses. Hosted on Vercel.",
         "stack": ["React", "NextJS", "Truffle", "Solidity", "web3.js", "Metamask", "Vercel"],
-        "image": "Ethwallet.png",
+        "preview": "Ethwallet.png",
         "url": "https://ethwallet.vercel.app/"
       },
       {
         "name": "Dev Portfolio",
         "detail": "Personal development portfolio website supporting both English and Korean languages, with built-in support for dark and light themes. Hosted on Vercel & incorporates i18N for localization.",
         "stack": ["TypeScript", "React", "SCSS", "NextJS", "JSON API", "Vercel", "i18N"],
-        "image": "Portfolio.png",
+        "preview": "Portfolio.png",
         "url": "https://jananadi-portfolio.vercel.app/"
       },
       {
         "name": "Canvas Confetti",
         "detail": "Personal art portfolio site, created using JavaScript and Sass on Vue.js. AWS S3 & Cloudfront for distribution, and Github Actions for CI/CD.",
         "stack": ["JavaScript", "SCSS", "Vue", "NuxtJs", "S3", "AWS Cloudfront", "Github Actions"],
-        "image": "CanvasConfetti.png",
+        "preview": "CanvasConfetti.png",
         "url": "https://www.canvasconfetti.art"
       }
     ],
