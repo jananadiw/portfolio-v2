@@ -25,7 +25,7 @@ export default function ArticleComponent({
           <div className="group p-3 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-4">
             <motion.div
               className="flex w-full p-3"
-              whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+              whileHover={{ scale: 1.03, transition: { duration: 0.1 } }}
             >
               <div className="w-1/4">
                 <Image

@@ -41,6 +41,7 @@ export default function Paintings() {
             width={300}
             height={400}
             loading="lazy"
+            style={{ pointerEvents: "none" }}
           />
         ))}
       </div>

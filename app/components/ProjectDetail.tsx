@@ -36,6 +36,7 @@ export default function ProjectDetail({
                 alt="thumbnail"
                 loading="lazy"
                 src={`/images/${project.preview}`}
+                style={{ pointerEvents: "none" }}
                 className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
               />
             </div>
