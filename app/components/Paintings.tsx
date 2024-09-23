@@ -13,7 +13,7 @@ const imageList = [
     alt: "artwork 2",
   },
   {
-    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/8_Digital_reflections.jpg",
+    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/3_Guiding_light.jpg",
     alt: "artwork 3",
   },
   {
@@ -34,19 +34,14 @@ export default function Paintings() {
     >
       <div className="mb-10 grid grid-rows-2 grid-flow-col gap-4">
         {imageList.map((image, index) => (
-          <motion.div
+          <Image
             key={index}
-            className="rounded-xl overflow-hidden"
-            {...hoverEffect}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={300}
-              height={400}
-              style={{ maxWidth: "100%", height: "100%" }}
-            />
-          </motion.div>
+            src={image.src}
+            alt={image.alt}
+            width={300}
+            height={400}
+            loading="lazy"
+          />
         ))}
       </div>
       <ViewMore text="See More Paintings" type="paintings" />

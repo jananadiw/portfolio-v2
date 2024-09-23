@@ -1,7 +1,8 @@
+// components/Header.tsx
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { outfit } from "../styles/font";
-import Link from "next/link";
+import Navbar from "./Navbar";
+import SocialIcons from "./SocialIcons";
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState("about");
@@ -20,14 +21,11 @@ export default function Header() {
       }
     );
 
-    // Add each section (with an Id) to be observed
     document.querySelectorAll("section").forEach((section) => {
       observer.observe(section);
     });
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   const handleLinkClick = (link: string) => {
@@ -53,132 +51,9 @@ export default function Header() {
           Passionate about building dynamic, user-centric web experiences that
           engage and include everyone.
         </p>
-        <nav className={`nav hidden lg:block ${outfit.className} text-xl`}>
-          <ul className="mt-16 w-max">
-            <li
-              className={`${
-                activeLink === "about" ? "text-[#d5b3b3]" : "text-test1"
-              } transition-colors duration-300`}
-            >
-              <a
-                className="group flex items-center py-1"
-                href="#about"
-                onClick={() => handleLinkClick("about")}
-              >
-                <p className="hover:text-[#f87171] transition-colors duration-300">
-                  About
-                </p>
-              </a>
-            </li>
-            <li
-              className={`${
-                activeLink === "work" ? "text-[#d5b3b3]" : "text-test1"
-              } transition-colors duration-300`}
-            >
-              <a
-                className="group flex items-center py-1"
-                href="#work"
-                onClick={() => handleLinkClick("work")}
-              >
-                <p className="hover:text-[#f87171] transition-colors duration-300">
-                  Work
-                </p>
-              </a>
-            </li>
-            <li
-              className={`${
-                activeLink === "projects" ? "text-[#d5b3b3]" : "text-test1"
-              } transition-colors duration-300`}
-            >
-              <a
-                className="group flex items-center py-1"
-                href="#projects"
-                onClick={() => handleLinkClick("projects")}
-              >
-                <p className="hover:text-[#f87171] transition-colors duration-300">
-                  Projects
-                </p>
-              </a>
-            </li>
-            <li
-              className={`${
-                activeLink === "paintings" ? "text-[#d5b3b3]" : "text-test1"
-              } transition-colors duration-300`}
-            >
-              <a
-                className="group flex items-center py-1"
-                href="#paintings"
-                onClick={() => handleLinkClick("paintings")}
-              >
-                <p className="hover:text-[#f87171] transition-colors duration-300">
-                  Artwork
-                </p>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navbar activeLink={activeLink} handleLinkClick={handleLinkClick} />
       </div>
-      <ul className="mt-8 flex items-center">
-        <li className="mr-5 text-xs">
-          <div className="icon-container">
-            <Link
-              href={"https://github.com/jananadiw"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="github_icon"
-                src="icons/github.svg"
-              />
-            </Link>
-          </div>
-        </li>
-        <li className="mr-5 text-xs">
-          <div className="icon-container">
-            <Link
-              href={"https://www.linkedin.com/in/jananadiw/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                width={36}
-                height={36}
-                alt="linkedIn icon"
-                src="icons/linkedIn.svg"
-              />
-            </Link>
-          </div>
-        </li>
-        <li className="mr-5 text-xs">
-          <div className="icon-container">
-            <Link
-              href={"https://twitter.com/jananadiw_"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                width={40}
-                height={40}
-                alt="twitter_icon"
-                src="icons/twitter.svg"
-              />
-            </Link>
-          </div>
-        </li>
-        <li className="mr-5 text-xs">
-          <div className="icon-container">
-            <Link
-              href={"https://www.instagram.com/jananadiw/"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image width={40} height={40} alt="ig_icon" src="icons/ig.svg" />
-            </Link>
-          </div>
-        </li>
-      </ul>
+      <SocialIcons />
     </div>
   );
 }

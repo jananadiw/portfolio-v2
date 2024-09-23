@@ -13,7 +13,7 @@ export default function ArticleComponent({
   return (
     <section
       id="projects"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
+      className="mb-10 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
       {articles.map((article: any, index: number) => (
         <Link
@@ -22,9 +22,9 @@ export default function ArticleComponent({
           rel="noreferrer noopener"
           href={`${article.url}`}
         >
-          <div className="group p-4 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-10">
+          <div className="group p-3 rounded-lg transition hover:bg-test5 hover:drop-shadow-2xl flex mb-4">
             <motion.div
-              className="flex w-full p-4"
+              className="flex w-full p-3"
               whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
             >
               <div className="w-1/4">
@@ -32,6 +32,7 @@ export default function ArticleComponent({
                   width={100}
                   height={113}
                   alt="thumbnail"
+                  loading="lazy"
                   src={`/images/${article.image}`}
                   className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
                 />

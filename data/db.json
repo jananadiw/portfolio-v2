@@ -1,7 +1,7 @@
 {
     "experience": [
       {
-        "time": "Jan - Aug 2023",
+        "time": "Jan - Sept 2023",
         "title": "Front End Engineer",
         "workplace": "Tokamak Network",
         "url": "https://www.tokamak.network/#/",
@@ -9,21 +9,21 @@
         "projects": [
           {
             "name": "Bridge & Swap",
-            "detail":"Collaborated on developing a bridge application to facilitate seamless token and digital asset swaps between between layer 2 Ethereum or Titan networks.",
+            "detail":"A bridge application to facilitate seamless token and digital asset swaps between between layer 2 Ethereum or Titan networks.",
             "url": "https://app.bridge.tokamak.network/",
             "preview": "Tokamak_Bridge.png",
             "stack": ["Typescript", "ReactJs", "NextJS", "GraphQL", "Chakra UI", "Uniswap"]
           },
           {
             "name": "Tonstarter",
-            "detail":"Contributed to the design & development of a decentralized launchpad platform, TONStarter, where users can issue tokens for Layer 2 blockchain projects.",
+            "detail":"Decentralized launchpad platform, TONStarter, where users can issue tokens for Layer 2 blockchain projects.",
             "url": "https://tonstarter.tokamak.network/launch",
             "preview": "Tokamak_Launchpad.png",
             "stack": ["Typescript", "ReactJs", "GraphQL", "Chakra UI", "ethers.js", "Uniswap", "i18Next"]
           },
           {
             "name": "L2 Mainnet",
-            "detail":"Implemented and enhanced UI/UX of the landing page that introduces the product and highlights its key services.",
+            "detail":"Landing page that introduces the product and highlights its key services.",
             "url": "https://titan.tokamak.network/",
             "preview": "Tokamak_Landing.png",
             "stack": ["Typescript", "NextJs","ReactJs", "Chakra UI", "Vercel"]
@@ -39,14 +39,14 @@
         "projects": [
           {
             "name": "ONDA PMS",
-            "detail": "Played a key role in building a property management system tailored for small hotel owners, implementing essential features like reservation management, cost tracking, rate adjustments, and night audits to streamline hotel operations.",
+            "detail": "Property management system tailored for small hotel owners, implementing essential features like reservation management, cost tracking, rate adjustments, and night audits to streamline hotel operations.",
             "url": "https://www.onda.me/hotel-plus",
             "preview": "Onda_pms.png",
             "stack": ["TypeScript", "VueJs", "NuxtJs", "Sass", "i18N", "Prisma", "GraphQL", "Figma"]
           },
           {
             "name": "Property Owner Inquiry Portal",
-            "detail": "Designed and developed a communication portal that enables individual hotel owners to directly interact with customer success teams, improving operational support and enhancing customer service.",
+            "detail": "Communication portal that enables individual hotel owners to directly interact with customer success teams, improving operational support and enhancing customer service.",
             "url": "https://gsa-inquiries.onda.me/crystalvalleyccgoldenvillage",
             "preview": "Onda_gsa.png",
             "stack": ["TypeScript", "VueJs", "Sass", "Google Sheets API", "Google Cloud Platform", "AWS Cloudfront"]
@@ -62,14 +62,14 @@
         "projects": [
           {
             "name": "IntelEvac",
-            "detail": "Contributed to build the backend of a smart evacuation system for shooting incidents. Introduced in schools across the US, the system was recognized for its innovation and awarded at CES 2020.",
+            "detail": "Smart evacuation system for shooting incidents. Introduced in schools across the US, the system was recognized for its innovation and awarded at CES 2020.",
             "url": "https://www.corners.co.kr/page_eng/solution_03.php",
             "preview": "Corners_Intelevac.png",
             "stack": ["NodeJs", "JavaScript", "ExpressJs", "PostgreSQL", "AWS", "OAuth"]
           },
           {
             "name": "InteleGuide",
-            "detail": "Collaborated on the design and development of the backend for a smart evacuation system utilized by government agencies, as well as public and private institutions.",
+            "detail": "Smart evacuation system utilized by government agencies, as well as public and private institutions.",
             "url": "https://www.corners.co.kr/page_eng/solution_02.php",
             "preview": "Corners_Inteleguide.png",
             "stack": ["Java", "PostgreSQL", "Maven", "Spring Boot", "IoT"]

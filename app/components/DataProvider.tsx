@@ -22,7 +22,7 @@ export default function DataProvider() {
       .then((fetchedData: Data) => setData(fetchedData));
   }, []);
 
-  if (!data) return <Loading componentName="work" />;
+  if (!data) return <Loading />;
 
   return (
     <>

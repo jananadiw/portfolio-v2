@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { outfit } from "../styles/font";
-import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { ProjectData } from "../types";
 import { motion } from "framer-motion";
@@ -16,9 +13,9 @@ export default function ProjectsComponent({
   return (
     <section
       id="projects"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
+      className="mb-8 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
-      {projects.map((project: any, index: number) => (
+      {projects.map((project: ProjectData, index: number) => (
         <ProjectDetail project={project} index={index} key={index} />
       ))}
       <ViewMore text={"See GitHub Profile"} type={"projects"} />

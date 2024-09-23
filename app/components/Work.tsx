@@ -1,5 +1,5 @@
 import React from "react";
-import { inter, youngSerif, outfit } from "../styles/font";
+import { outfit } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { WorkData, ProjectData } from "../types";
@@ -19,7 +19,7 @@ export default function WorkComponent({
       {experience.map((item: any, index: number) => (
         <div key={index} className="group p-2 flex mb-12">
           <div>
-            <div className={`text-test1 text-lg ${outfit.className} ml-4`}>
+            <div className={`text-test1 text-lg ${outfit.className}`}>
               <Link
                 href={`${item.url}`}
                 target="_blank"
@@ -28,6 +28,7 @@ export default function WorkComponent({
                 <h3 className="text-red-300 text-xl font-semibold">
                   {item.title} - {item.workplace}
                 </h3>
+                <p className="text-sm">{item.time}</p>
               </Link>
               <p className="mt-4 text-test1">{item.detail}</p>
               <div
