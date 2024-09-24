@@ -20,17 +20,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Directory Structure
 ```js
 .
-├── components // all React Components can be used in layouts, pages
-│   ├── navbar
-│   ├── header
-├── pages // route pages
-|   ├── about // about page
-│   │   ├── index.tsx
-│   ├── _app.tsx // error page
-│   ├── index.tsx // home/index page
-├── public // static imgs etc.
-└── styles
+├── app
+│   ├── components
+│   │   ├── About.tsx
+│   │   ├── Articles.tsx
+│   │   └── Work.tsx
+│   ├── styles
+│   │   ├── font.ts
+│   │   └── globals.scss
+│   ├── types.ts
+│   ├── layout.tsx
+│   └── page.tsx
+├── data
+│   └── db.json
+├── public
+│   ├── icons
+│   │   ├── github.svg
+│   ├── images
+│   │   └── Portfolio.png
+│   └── Preview.png
+├── next.config.js
+├── package.json
+├── README.md
+└── tsconfig.json
 ```
-
-## Deploy on Vercel
-Commit and push changes to deploy on Vercel.
