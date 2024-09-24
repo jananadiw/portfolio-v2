@@ -5,7 +5,7 @@
 
 > A simple, single page personal portfolio website to showcase and organize important personal and work projects all in one place, built with NextJs & Tailwind CSS
 ## Preview
-<img src="/public/preview.png" width="800"/>
+<img src="/public/Preview.png" width="800"/>
 
 ## Build Setup
 ```bash
