@@ -15,13 +15,6 @@
             "stack": ["Typescript", "ReactJs", "NextJS", "GraphQL", "Chakra UI", "Uniswap"]
           },
           {
-            "name": "Tonstarter",
-            "detail":"Decentralized launchpad platform, TONStarter, where users can issue tokens for Layer 2 blockchain projects.",
-            "url": "https://tonstarter.tokamak.network/launch",
-            "preview": "Tokamak_Launchpad.png",
-            "stack": ["Typescript", "ReactJs", "GraphQL", "Chakra UI", "ethers.js", "Uniswap", "i18Next"]
-          },
-          {
             "name": "L2 Mainnet",
             "detail":"Landing page that introduces the product and highlights its key services.",
             "url": "https://titan.tokamak.network/",
