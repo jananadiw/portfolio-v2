@@ -1,6 +1,6 @@
 // components/Navbar.tsx
 import React from "react";
-import { outfit } from "../styles/font";
+import { inter } from "../styles/font";
 
 interface NavbarProps {
   activeLink: string;
@@ -13,10 +13,11 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
     { id: "work", label: "Work" },
     { id: "projects", label: "Projects" },
     { id: "paintings", label: "Artwork" },
+    { id: "cv", label: "Read.cv", url: "https://read.cv/jananadi" },
   ];
 
   return (
-    <nav className={`nav hidden lg:block ${outfit.className} text-xl`}>
+    <nav className={`nav hidden lg:block ${inter.className} text-xl`}>
       <ul className="mt-16 w-max">
         {navItems.map((item) => (
           <li
@@ -27,7 +28,9 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
           >
             <a
               className="group flex items-center py-1"
-              href={`#${item.id}`}
+              href={item.url ? item.url : `#${item.id}`} // Updated href
+              target={item.url ? "_blank" : undefined} // Open in new tab if URL exists
+              rel={item.url ? "noopener noreferrer" : undefined} // Security best practice
               onClick={() => handleLinkClick(item.id)}
             >
               <p className="hover:text-[#f87171] transition-colors duration-300">

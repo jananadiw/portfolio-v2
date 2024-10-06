@@ -1,5 +1,5 @@
 import React from "react";
-import { outfit } from "../styles/font";
+import { inter } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { WorkData, ProjectData } from "../types";
@@ -17,22 +17,22 @@ export default function WorkComponent({
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
       {experience.map((item: any, index: number) => (
-        <div key={index} className="group p-2 flex mb-12">
+        <div key={index} className="group p-2 flex">
           <div>
-            <div className={`text-test1 text-lg ${outfit.className}`}>
+            <div className={`text-test1 text-lg ${inter.className}`}>
               <Link
                 href={`${item.url}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h3 className="text-red-300 text-xl font-semibold">
+                <h3 className="text-red-300 text-xl font-base">
                   {item.title} - {item.workplace}
                 </h3>
-                <p className="text-sm">{item.time}</p>
+                <p className="mt-1 text-base">{item.time}</p>
               </Link>
               <p className="mt-4 text-test1">{item.detail}</p>
               <div
-                className={`mt-4  gap-3 ${outfit.className} text-sm text-slate-100`}
+                className={`mt-4 gap-3 ${inter.className} text-sm text-slate-100`}
               >
                 {item.projects.map((project: ProjectData, i: number) => (
                   <ProjectDetail project={project} index={index} key={i} />

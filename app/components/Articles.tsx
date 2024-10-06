@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { outfit } from "../styles/font";
+import { inter } from "../styles/font";
 import Link from "next/link";
 import { ArticleData } from "../types";
 import { motion } from "framer-motion";
@@ -37,7 +37,7 @@ export default function ArticleComponent({
                   className="rounded transition border-gray-500 group-hover:border-gray-500 sm:order-1 sm:col-span-2 sm:translate-y-1"
                 />
               </div>
-              <div className={`${outfit.className} w-3/4 ml-4 text-lg`}>
+              <div className={`${inter.className} w-3/4 ml-4 text-lg`}>
                 <h3>{article.year}</h3>
                 <p className="text-test1 mt-2">{article.headline}</p>
               </div>

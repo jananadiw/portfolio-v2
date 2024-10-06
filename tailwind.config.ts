@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'test1': "#cffcf8",
-        'test2': "#e0fbfc",
-        'test5': '#0b16241f',
+        'test1': "#D3D3D3",
+        'test2': "#D3D3D3",
+        'test5': '#2b3d4c',
       },
     },
   },

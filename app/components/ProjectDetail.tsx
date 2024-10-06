@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { outfit } from "../styles/font";
+import { inter } from "../styles/font";
 import Link from "next/link";
 import { ProjectData } from "../types";
 import { motion } from "framer-motion";
@@ -25,9 +25,9 @@ export default function ProjectDetail({
           whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
         >
           <div
-            className={`${outfit.className} text-lg group-hover:text-red-300`}
+            className={`${inter.className} text-lg group-hover:text-red-300`}
           >
-            <h3>{project.name}</h3>
+            <h3 className="text-xl">{project.name}</h3>
             <p className="text-test1 mt-2">{project.detail}</p>
             <div className="">
               <Image
@@ -41,12 +41,12 @@ export default function ProjectDetail({
               />
             </div>
             <div
-              className={`mt-4 flex flex-wrap gap-2 ${outfit.className} text-sm`}
+              className={`mt-4 flex flex-wrap gap-2 ${inter.className} text-sm`}
             >
               {project.stack?.map((tech: string, i: number) => (
                 <div
                   key={i}
-                  className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-sky-950 py-0.5 px-2 text-sm text-green-100"
+                  className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-900 py-0.5 px-2 text-sm text-test1"
                 >
                   {tech}
                 </div>

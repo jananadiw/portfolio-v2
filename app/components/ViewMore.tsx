@@ -1,5 +1,5 @@
 import React from "react";
-import { inter, youngSerif, outfit } from "../styles/font";
+import { inter } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
@@ -21,10 +21,10 @@ export default function ViewMore(props: ViewProps) {
 
   return (
     <motion.div
-      className="flex gap-2 inline-block font-bold items-center hover:text-red-300"
-      whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
+      className="flex gap-2 inline-block text-test1 font-bold items-center hover:text-red-300"
+      whileHover={{ scale: 1.03, transition: { duration: 0.1 } }}
     >
-      <p className={`text-xl font-extrabold ${outfit.className}`}>
+      <p className={`text-xl font-bold ${inter.className}`}>
         <Link href={link} target="_blank" rel="noopener noreferrer">
           {text}
         </Link>

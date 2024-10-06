@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { outfit } from "../styles/font";
+import { inter } from "../styles/font";
 import { AboutData } from "../types";
 
 export default function About() {
@@ -8,29 +8,23 @@ export default function About() {
     present:
       "I've worked as a full-stack developer, specializing in building web applications in the Crypto/Blockchain industry. Previously, I gained experience in the Travel/Hospitality-Tech, R&D sector as a back-end developer in the IoT/Safety-Tech field, where I focused on building APIs & Web Services.",
     outofwork:
-      "Outside my work as a programmer, I enjoy creating digital art, traveling, going on hikes, and occasionally writing articles on Medium.",
+      "Outside my work as a programmer, I enjoy creating digital art, traveling, going on hikes, and occasionally writing about what I learn and experiment.",
   };
 
   return (
     <section
       id="about"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24 scroll-smooth"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24 scroll-smooth font-base"
     >
-      <p
-        className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
-      >
+      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
         {about.past}
       </p>
       <br />
-      <p
-        className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
-      >
+      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
         {about.present}
       </p>
       <br />
-      <p
-        className={`text-test1 ${outfit.className} text-lg text-slate-400 md:text-xl`}
-      >
+      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
         {about.outofwork}
       </p>
     </section>

@@ -32,7 +32,7 @@ export default function Paintings() {
       id="paintings"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24"
     >
-      <div className="mb-10 grid grid-rows-2 grid-flow-col gap-4">
+      <div className="grid grid-rows-2 grid-flow-col gap-4">
         {imageList.map((image, index) => (
           <Image
             key={index}
