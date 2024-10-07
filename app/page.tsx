@@ -17,7 +17,9 @@ export default function Home() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    const moveCursor = (e) => {
+    const moveCursor = (
+      e: React.MouseEvent<Element, MouseEvent> | MouseEvent
+    ) => {
       cursorX.set(e.clientX - 16);
       cursorY.set(e.clientY + window.scrollY - 16); // Adjust for scroll position
     };
