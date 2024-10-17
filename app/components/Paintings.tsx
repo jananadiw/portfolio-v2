@@ -5,20 +5,21 @@ import ViewMore from "./ViewMore";
 
 const imageList = [
   {
-    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/1_Girl_and_her_coffee.jpg",
+    src: "/images/1_Girl_and_her_coffee.jpg",
     alt: "artwork 1",
   },
+
   {
-    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/6_Serenity_in_submersion.jpg",
-    alt: "artwork 2",
+    src: "/images/2_Into_the_wild.jpg",
+    alt: "artwork 4",
   },
   {
-    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/3_Guiding_light.jpg",
+    src: "/images/3_Guiding_light.jpg",
     alt: "artwork 3",
   },
   {
-    src: "https://janawcontent.s3.ap-northeast-2.amazonaws.com/2_Into_the_wild.jpg",
-    alt: "artwork 4",
+    src: "/images/6_Serenity_in_submersion.jpg",
+    alt: "artwork 2",
   },
 ];
 
