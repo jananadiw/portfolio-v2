@@ -1,5 +1,5 @@
 import React from "react";
-import { inter } from "../styles/font";
+import { inter, noto_serif } from "../styles/font";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { WorkData, ProjectData } from "../types";
@@ -25,7 +25,9 @@ export default function WorkComponent({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h3 className="text-red-300 text-xl font-base">
+                <h3
+                  className={`${noto_serif.className} text-red-400/80 text-xl font-base`}
+                >
                   {item.title} - {item.workplace}
                 </h3>
                 <p className="mt-1 text-base">{item.time}</p>

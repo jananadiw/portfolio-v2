@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { inter } from "../styles/font";
+import { inter, noto_serif } from "../styles/font";
 import Link from "next/link";
 import { ProjectData } from "../types";
 import { motion } from "framer-motion";
@@ -27,8 +27,10 @@ export default function ProjectDetail({
           <div
             className={`${inter.className} text-lg group-hover:text-red-300`}
           >
-            <h3 className="text-xl">{project.name}</h3>
-            <p className="text-test1 mt-2">{project.detail}</p>
+            <h3 className={`${noto_serif.className} text-red-400/75 text-xl`}>
+              {project.name}
+            </h3>
+            <p className=" text-test1 mt-2">{project.detail}</p>
             <div className="">
               <Image
                 width={500}
@@ -46,7 +48,7 @@ export default function ProjectDetail({
               {project.stack?.map((tech: string, i: number) => (
                 <div
                   key={i}
-                  className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-slate-900 py-0.5 px-2 text-sm text-test1"
+                  className="relative flex select-none items-center whitespace-nowrap rounded-lg bg-red-400/50 py-0.5 px-2 text-sm text-zinc-50"
                 >
                   {tech}
                 </div>

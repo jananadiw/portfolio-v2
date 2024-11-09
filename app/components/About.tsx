@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { inter } from "../styles/font";
-import { AboutData } from "../types";
 
 export default function About() {
   const about = {
@@ -14,19 +13,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24 scroll-smooth font-base"
+      className={`mb-16 scroll-mt-16 md:mb-24 lg:mb-32 lg:scroll-mt-24 scroll-smooth font-base ${inter.className} text-test1 text-lg md:text-xl`}
     >
-      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
-        {about.past}
-      </p>
+      <p>{about.past}</p>
       <br />
-      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
-        {about.present}
-      </p>
+      <p>{about.present}</p>
       <br />
-      <p className={`text-test1 ${inter.className} text-lg md:text-xl`}>
-        {about.outofwork}
-      </p>
+      <p>{about.outofwork}</p>
     </section>
   );
 }

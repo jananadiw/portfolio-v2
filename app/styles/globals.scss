@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 :root {
     // background-color: #2c475c;
+    /* background-color: #121212; */
+    /* background-color: #181818; */
+    /* background-color: #202020; */
     background-color: #22303c;
 }
 
@@ -13,7 +17,6 @@ html {
 }
 
 body {
-    backdrop-filter: blur(0.8px);
     font-family: "Inter", sans-serif;
 }
 
