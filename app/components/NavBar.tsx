@@ -13,7 +13,6 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
     { id: "work", label: "Work" },
     { id: "projects", label: "Projects" },
     { id: "paintings", label: "Artwork" },
-    { id: "cv", label: "Read.cv", url: "https://read.cv/jananadi" },
   ];
 
   return (
@@ -28,9 +27,9 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
           >
             <a
               className="group flex items-center py-1"
-              href={item.url ? item.url : `#${item.id}`} // Updated href
-              target={item.url ? "_blank" : undefined} // Open in new tab if URL exists
-              rel={item.url ? "noopener noreferrer" : undefined} // Security best practice
+              href={`#${item.id}`}
+              target={undefined}
+              rel={undefined}
               onClick={() => handleLinkClick(item.id)}
             >
               <p className="hover:text-[#f87171] transition-colors duration-300">

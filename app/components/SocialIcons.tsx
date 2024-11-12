@@ -17,6 +17,13 @@ const socialLinks = [
     width: 28,
     height: 28,
   },
+  {
+    href: "https://read.cv/jananadi",
+    icon: "readCV.svg",
+    alt: "readCV_icon",
+    width: 32,
+    height: 32,
+  },
 ];
 
 const SocialIcons: React.FC = () => {
