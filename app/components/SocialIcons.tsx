@@ -17,27 +17,13 @@ const socialLinks = [
     width: 28,
     height: 28,
   },
-  {
-    href: "https://twitter.com/jananadiw_",
-    icon: "twitter.svg",
-    alt: "twitter_icon",
-    width: 28,
-    height: 28,
-  },
-  {
-    href: "https://www.instagram.com/jananadiw/",
-    icon: "ig.svg",
-    alt: "ig_icon",
-    width: 28,
-    height: 28,
-  },
 ];
 
 const SocialIcons: React.FC = () => {
   return (
     <ul className="mt-8 flex items-center">
       {socialLinks.map((link, index) => (
-        <li key={index} className="mr-5 text-xs">
+        <li key={index} className="mr-5">
           <div className="icon-container">
             <Link href={link.href} target="_blank" rel="noopener noreferrer">
               <Image
