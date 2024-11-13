@@ -30,8 +30,8 @@ export default function ProjectDetail({
             <h3 className={`${noto_serif.className} text-red-400/75 text-xl`}>
               {project.name}
             </h3>
-            <p className=" text-test1 mt-2">{project.detail}</p>
-            <div className="">
+            <p className="text-test1 mt-2">{project.detail}</p>
+            <div className="mt-4">
               <Image
                 width={500}
                 height={400}

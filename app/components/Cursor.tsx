@@ -4,17 +4,21 @@ import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function Cursor() {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
+  // mouse
+  const cursorX = useMotionValue(0);
+  const cursorY = useMotionValue(0);
 
-  const springConfig = { damping: 40, stiffness: 650 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+  const cursorSize = 20;
+  // smooth mouse
+  const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 };
+  const cursorXSpring = useSpring(cursorX, smoothOptions);
+  const cursorYSpring = useSpring(cursorY, smoothOptions);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.pageX);
-      cursorY.set(e.pageY);
+      const { clientX, clientY } = e;
+      cursorX.set(clientX - cursorSize / 2);
+      cursorY.set(clientY - cursorSize / 2);
     };
 
     window.addEventListener("mousemove", moveCursor);
@@ -25,8 +29,8 @@ export default function Cursor() {
     <motion.div
       className="cursor"
       style={{
-        translateX: cursorXSpring,
-        translateY: cursorYSpring,
+        left: cursorXSpring,
+        top: cursorYSpring,
       }}
     />
   );
