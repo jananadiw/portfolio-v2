@@ -1,29 +1,42 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function Cursor() {
-  // mouse
+  const [isMobile, setIsMobile] = useState(false);
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
 
   const cursorSize = 20;
-  // smooth mouse
   const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 };
   const cursorXSpring = useSpring(cursorX, smoothOptions);
   const cursorYSpring = useSpring(cursorY, smoothOptions);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      cursorX.set(clientX - cursorSize / 2);
-      cursorY.set(clientY - cursorSize / 2);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener("mousemove", moveCursor);
-    return () => window.removeEventListener("mousemove", moveCursor);
-  }, [cursorX, cursorY]);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    if (!isMobile) {
+      const moveCursor = (e: MouseEvent) => {
+        const { clientX, clientY } = e;
+        cursorX.set(clientX - cursorSize / 2);
+        cursorY.set(clientY - cursorSize / 2);
+      };
+
+      window.addEventListener("mousemove", moveCursor);
+      return () => {
+        window.removeEventListener("mousemove", moveCursor);
+        window.removeEventListener('resize', checkMobile);
+      };
+    }
+  }, [cursorX, cursorY, isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <motion.div
