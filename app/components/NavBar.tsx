@@ -13,6 +13,7 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
     { id: "work", label: "Work" },
     { id: "projects", label: "Projects" },
     { id: "paintings", label: "Artwork" },
+    { id: "blog", label: "Blog", href: "/blog" },
   ];
 
   return (
@@ -27,7 +28,7 @@ const NavBar: React.FC<NavbarProps> = ({ activeLink, handleLinkClick }) => {
           >
             <a
               className="group flex items-center py-1"
-              href={`#${item.id}`}
+              href={item.href ? `${item.href}` : `#${item.id}`}
               target={undefined}
               rel={undefined}
               onClick={() => handleLinkClick(item.id)}
