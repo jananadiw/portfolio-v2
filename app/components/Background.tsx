@@ -12,7 +12,7 @@ export default function Background({ children }: { children: ReactNode }) {
         <filter id="noise">
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="0.7"
+            baseFrequency="0.9"
             stitchTiles="stitch"
           />
         </filter>
