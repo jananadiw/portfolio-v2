@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import React from "react";
 import { inter } from "../styles/font";
 
